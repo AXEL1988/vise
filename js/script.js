@@ -119,16 +119,16 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Efecto parallax suave en la sección home
-window.addEventListener('scroll', function() {
-    const scrolled = window.pageYOffset;
-    const homeSection = document.querySelector('.home');
-    
-    if (homeSection) {
-        const rate = scrolled * -0.5;
-        homeSection.style.transform = `translateY(${rate}px)`;
-    }
-});
+// Efecto parallax suave en la sección home - DESACTIVADO
+// window.addEventListener('scroll', function() {
+//     const scrolled = window.pageYOffset;
+//     const homeSection = document.querySelector('.home');
+//     
+//     if (homeSection) {
+//         const rate = scrolled * -0.5;
+//         homeSection.style.transform = `translateY(${rate}px)`;
+//     }
+// });
 
 // Lazy loading para imágenes (si las agregas después)
 document.addEventListener('DOMContentLoaded', function() {
