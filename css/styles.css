@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif !important;
 }
 
 :root {
@@ -26,10 +27,11 @@
 
 html {
     scroll-behavior: smooth;
+    font-family: 'Montserrat', sans-serif !important;
 }
 
 body {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
     color: var(--text-dark);
     background-color: var(--white);
@@ -144,7 +146,7 @@ body {
     display: flex;
     gap: 0.5rem;
     position: absolute;
-    top: 1.5rem;
+    top: 1rem;
     left: 1.5rem;
 }
 
@@ -234,7 +236,7 @@ body {
     color: var(--white);
     text-decoration: none;
     font-family: 'Inter', sans-serif;
-    font-weight: bold;
+    font-weight: 500;
     font-size: 0.8rem;
     transition: var(--transition);
     padding: 0.5rem 0.5rem;
@@ -323,15 +325,16 @@ body {
 .home__title {
     font-family: 'Inter', sans-serif;
     font-size: 2.2rem;
-    font-weight: 600;
+    font-weight: 400;
     color: var(--primary-color);
-    margin-bottom: 0.50rem;
-    line-height: 1.2;
-    letter-spacing: -0.01em;
+    margin-bottom: 0.75rem;
+    line-height: 1;
+    letter-spacing: -0.03em;
 }
 
 .highlight {
-    color: var(--primary-dark);
+    color: var(--primary-color);
+    font-weight: 700;
 }
 
 .home__description {
