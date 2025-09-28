@@ -814,6 +814,332 @@ body {
     background-color: #333;
 }
 
+/* ========================================
+   PÁGINA NOSOTROS - ESTILOS ESPECÍFICOS
+   ======================================== */
+
+/* Navegación activa */
+.nav__link--active {
+    color: var(--accent-color) !important;
+    text-shadow: 0 0 8px rgba(0, 200, 83, 0.3);
+}
+
+/* Sección ¿Quiénes Somos? */
+.nosotros__quienes-somos {
+    padding: 0;
+    background-image: url('../images/home.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 70vh;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    /*padding-bottom: 2rem;*/
+}
+
+.nosotros__quienes-content {
+    background-color: var(--primary-dark);
+    border: 1px solid var(--white);
+    border-radius: 20px 20px 0 0;
+    padding: 4rem 6.8rem;
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+    margin-bottom: 0;
+}
+
+.nosotros__quienes-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(2, 31, 48, 0.7);
+    border-radius: 20px 20px 0 0;
+    z-index: 1;
+}
+
+.nosotros__quienes-title,
+.nosotros__quienes-description {
+    position: relative;
+    z-index: 2;
+}
+
+.nosotros__quienes-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 2rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.nosotros__quienes-description {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.3;
+    color: var(--white);
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Títulos de sección */
+.nosotros__section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    line-height: 1.2;
+}
+
+.nosotros__section-title--center {
+    text-align: center;
+}
+
+/* Sección Historia */
+.nosotros__history {
+    padding: 5rem 0;
+    background-color: var(--white);
+}
+
+.nosotros__history-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.nosotros__history-description {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+}
+
+.nosotros__history-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.nosotros__stat {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--light-gray);
+    border-radius: 15px;
+    border-left: 4px solid var(--accent-color);
+}
+
+.nosotros__stat-number {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.nosotros__stat-label {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Sección Misión, Visión y Valores */
+.nosotros__mvv {
+    padding: 5rem 0;
+    background-color: var(--light-gray);
+}
+
+.nosotros__mvv-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.nosotros__mvv-card {
+    background-color: var(--white);
+    padding: 3rem 2rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+    border-top: 4px solid var(--accent-color);
+}
+
+.nosotros__mvv-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.nosotros__mvv-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.nosotros__mvv-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.nosotros__mvv-description {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-light);
+}
+
+/* Sección Equipo */
+.nosotros__team {
+    padding: 5rem 0;
+    background-color: var(--white);
+}
+
+.nosotros__team-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.nosotros__team-description {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+}
+
+.nosotros__team-list {
+    list-style: none;
+    padding: 0;
+}
+
+.nosotros__team-list li {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1rem;
+    color: var(--text-light);
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.nosotros__team-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.nosotros__team-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.nosotros__team-stat {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--primary-color);
+    border-radius: 15px;
+    color: var(--white);
+}
+
+.nosotros__team-stat-number {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 0.5rem;
+}
+
+.nosotros__team-stat-label {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.9;
+}
+
+/* Sección Certificaciones */
+.nosotros__certifications {
+    padding: 5rem 0;
+    background-color: var(--light-gray);
+}
+
+.nosotros__certifications-content {
+    margin-top: 3rem;
+}
+
+.nosotros__certifications-description {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-light);
+    text-align: center;
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nosotros__certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.nosotros__certification {
+    background-color: var(--white);
+    padding: 2.5rem 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+    border: 2px solid transparent;
+}
+
+.nosotros__certification:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-color);
+    box-shadow: 0 10px 30px rgba(0, 200, 83, 0.2);
+}
+
+.nosotros__certification-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.nosotros__certification-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.nosotros__certification-description {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--text-light);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav__menu {
@@ -1020,5 +1346,175 @@ body {
 
     .footer__social-link {
         font-size: 1.1rem;
+    }
+
+    /* Responsive Nosotros */
+    .nosotros__quienes-title {
+        font-size: 2.5rem;
+    }
+
+    .nosotros__quienes-description {
+        font-size: 1.1rem;
+    }
+
+    /* .nosotros__quienes-somos {
+        padding-bottom: 1.5rem;
+    } */
+
+    .nosotros__quienes-content {
+        padding: 3rem 2rem;
+        border-radius: 15px 15px 0 0;
+    }
+
+    .nosotros__section-title {
+        font-size: 2rem;
+    }
+
+    .nosotros__history-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .nosotros__history-stats {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .nosotros__stat {
+        flex: 1;
+        margin: 0 0.5rem;
+    }
+
+    .nosotros__mvv-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .nosotros__team-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .nosotros__team-stats {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .nosotros__team-stat {
+        flex: 1;
+        margin: 0 0.5rem;
+    }
+
+    .nosotros__certifications-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 0.5rem;
+    }
+
+    .home__title {
+        font-size: 2rem;
+    }
+
+    .section__title {
+        font-size: 1.75rem;
+    }
+
+    .servicios__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .features__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .home__title {
+        font-size: 1.75rem;
+    }
+
+    .features__title {
+        font-size: 1.75rem;
+    }
+
+    .cta__title {
+        font-size: 1.75rem;
+    }
+
+    .footer__cta-section {
+        height: 400px;
+        padding: 2rem 0;
+    }
+
+    .footer__cta-title {
+        font-size: 1.75rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .footer__cta-button {
+        font-size: 0.9rem;
+        padding: 0.8rem 2rem;
+    }
+
+    .footer__logo-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .footer__nav-link {
+        font-size: 0.8rem;
+    }
+
+    .footer__social-link {
+        font-size: 1.1rem;
+    }
+
+    /* Responsive Nosotros Móvil */
+    .nosotros__quienes-title {
+        font-size: 2rem;
+    }
+
+    .nosotros__quienes-description {
+        font-size: 1rem;
+    }
+
+    /* .nosotros__quienes-somos {
+        padding-bottom: 1rem;
+    } */
+
+    .nosotros__quienes-content {
+        padding: 2rem 1.5rem;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .nosotros__section-title {
+        font-size: 1.75rem;
+    }
+
+    .nosotros__history-stats {
+        flex-direction: column;
+    }
+
+    .nosotros__stat {
+        margin: 0.5rem 0;
+    }
+
+    .nosotros__team-stats {
+        flex-direction: column;
+    }
+
+    .nosotros__team-stat {
+        margin: 0.5rem 0;
+    }
+
+    .nosotros__mvv-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .nosotros__certification {
+        padding: 2rem 1.5rem;
     }
 }
