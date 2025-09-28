@@ -1279,10 +1279,21 @@ body {
     border-radius: 0;
     overflow: hidden;
     border-bottom: 3px solid #263B49;
-    background-image: url('../images/home.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+.soluciones__card-image--fisica {
+    background-image: url('../images/seguridad-fisica.jpg');
+}
+
+.soluciones__card-image--electronica {
+    background-image: url('../images/seguridad-electronica.jpg');
+}
+
+.soluciones__card-image--otros {
+    background-image: url('../images/seguridad-otros.jpg');
 }
 
 .soluciones__card-placeholder {
