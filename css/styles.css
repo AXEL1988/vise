@@ -1135,10 +1135,7 @@ body {
 
 /* Hero Section - Soluciones */
 .soluciones__hero {
-    background-image: url('../images/home.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-color: var(--primary-color);
     min-height: 60vh;
     display: flex;
     align-items: center;
@@ -1155,14 +1152,66 @@ body {
     background-color: rgba(2, 31, 48, 0.7);
     z-index: 1;
 }
+.container_soluciones {
+    padding: 0 6rem;
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
 .soluciones__hero-content {
     position: relative;
     z-index: 2;
-    text-align: center;
+    /*text-align: center;*/
     color: var(--white);
     max-width: 800px;
-    margin: 0 auto;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.soluciones__cta-bottom {
+    margin-top: 3rem;
+    bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    z-index: 2;
+}
+
+.soluciones__cta-text {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--white);
+    margin: 0;
+    white-space: nowrap;
+}
+
+.soluciones__cta-icon {
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.soluciones__cta-icon:hover {
+    background-color: var(--white);
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.soluciones__cta-icon svg {
+    width: 16px;
+    height: 16px;
 }
 
 .soluciones__hero-title {
@@ -1335,12 +1384,38 @@ body {
 
 /* Responsive para Soluciones */
 @media (max-width: 768px) {
+    .container_soluciones {
+        padding: 0 2rem;
+    }
+    
     .soluciones__hero-title {
         font-size: 2.2rem;
     }
     
     .soluciones__hero-description {
         font-size: 1.1rem;
+    }
+    
+    .soluciones__cta-bottom {
+        bottom: 1rem;
+        right: 2rem;
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: flex-end;
+    }
+    
+    .soluciones__cta-text {
+        font-size: 0.9rem;
+    }
+    
+    .soluciones__cta-icon {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .soluciones__cta-icon svg {
+        width: 14px;
+        height: 14px;
     }
     
     .soluciones__section-title {

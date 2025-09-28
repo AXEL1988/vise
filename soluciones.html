@@ -3,125 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soluciones de Seguridad - VISE Ecuador</title>
+    <title>Conoce de Nosotros - VISE Ecuador</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Header -->
+    <!-- Header y Navegación -->
     <header class="header">
-        <div class="container">
-            <div class="header__content">
-                <div class="header__logo">
-                    <img src="images/logo.png" alt="VISE Ecuador" class="header__logo-image">
-                </div>
-                <nav class="nav">
-                    <a href="index.html" class="nav__link">Home</a>
-                    <a href="soluciones.html" class="nav__link nav__link--active">Soluciones<br> de Seguridad</a>
-                    <a href="nosotros.html" class="nav__link">Conoce de<br> Nosotros</a>
-                    <a href="#sectores" class="nav__link">Sectores de<br> Trabajo</a>
-                    <a href="#tendencias" class="nav__link">Tendencias del<br> Sector</a>
-                    <a href="#contacto" class="nav__link">Contáctanos</a>
-                </nav>
+        <!-- Primera sección: Fondo blanco con bullets y logo -->
+        <div class="header__top">
+            <div class="header__bullets">
+                <div class="bullet"></div>
+                <div class="bullet"></div>
+                <div class="bullet"></div>
+            </div>
+            <div class="header__logo">
+                <img src="images/logo.png" alt="VISE Ecuador">
             </div>
         </div>
+        
+        <!-- Segunda sección: Navegación -->
+        <nav class="nav">
+            <div class="nav__container">
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="index.html" class="nav__link">Home<br>Page</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="soluciones.html" class="nav__link">Soluciones<br> de Seguridad</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="nosotros.html" class="nav__link nav__link--active">Conoce<br> de Nosotros</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="sectores.html" class="nav__link">Sectores <br> de Trabajo</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="tendencias.html" class="nav__link">Tendencias <br>del Sector</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="contacto.html" class="nav__link">Contáctanos</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav__toggle" id="nav-toggle">
+                    <span class="nav__toggle-line"></span>
+                    <span class="nav__toggle-line"></span>
+                    <span class="nav__toggle-line"></span>
+                </div>
+            </div>
+        </nav>
     </header>
 
     <!-- Sección Hero - Soluciones de Seguridad -->
     <section class="soluciones__hero">
-        <div class="container">
+        <div class="container_soluciones">
             <div class="soluciones__hero-content">
-                <h1 class="soluciones__hero-title">Soluciones de Seguridad</h1>
+                <h1 class="soluciones__hero-title">SOLUCIONES DE SEGURIDAD</h1>
                 <p class="soluciones__hero-description">
-                    Protegemos lo que más importa con tecnología de vanguardia, 
-                    personal altamente capacitado y más de 30 años de experiencia 
-                    en el sector de seguridad privada.
+                    VISE Ecuador ofrece un portafolio completo de servicios de seguridad
+                    diseñados para adaptarse a diferentes entornos. Nuestra combinación de
+                    talento humano, innovación tecnológica y protocolos internacionales asegura
+                    protección real en todo momento.
                 </p>
             </div>
-        </div>
-    </section>
-
-    <!-- Sección Servicios Principales -->
-    <section class="soluciones__servicios">
-        <div class="container">
-            <h2 class="soluciones__section-title">Nuestros Servicios</h2>
-            <div class="soluciones__grid">
-                <div class="soluciones__card">
-                    <div class="soluciones__card-icon">
-                        <img src="images/home_1.png" alt="Seguridad Física">
-                    </div>
-                    <h3 class="soluciones__card-title">Seguridad Física</h3>
-                    <p class="soluciones__card-description">
-                        Personal de seguridad altamente capacitado para proteger 
-                        instalaciones, eventos y personas con protocolos internacionales.
-                    </p>
-                </div>
-                <div class="soluciones__card">
-                    <div class="soluciones__card-icon">
-                        <img src="images/home_2.png" alt="Seguridad Electrónica">
-                    </div>
-                    <h3 class="soluciones__card-title">Seguridad Electrónica</h3>
-                    <p class="soluciones__card-description">
-                        Sistemas de monitoreo, alarmas, cámaras de seguridad y 
-                        control de acceso con tecnología de última generación.
-                    </p>
-                </div>
-                <div class="soluciones__card">
-                    <div class="soluciones__card-icon">
-                        <img src="images/home_3.png" alt="Seguridad Tecnológica">
-                    </div>
-                    <h3 class="soluciones__card-title">Seguridad Tecnológica</h3>
-                    <p class="soluciones__card-description">
-                        Soluciones digitales, ciberseguridad y sistemas integrados 
-                        para una protección completa y moderna.
-                    </p>
-                </div>
-                <div class="soluciones__card">
-                    <div class="soluciones__card-icon">
-                        <img src="images/home_4.png" alt="Consultoría">
-                    </div>
-                    <h3 class="soluciones__card-title">Consultoría</h3>
-                    <p class="soluciones__card-description">
-                        Asesoría especializada para diseñar estrategias de seguridad 
-                        personalizadas según las necesidades específicas de cada cliente.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sección Sectores de Trabajo -->
-    <section class="soluciones__sectores">
-        <div class="container">
-            <h2 class="soluciones__section-title">Sectores que Atendemos</h2>
-            <div class="soluciones__sectores-grid">
-                <div class="soluciones__sector-item">
-                    <h3 class="soluciones__sector-title">Sector Financiero</h3>
-                    <p class="soluciones__sector-description">
-                        Protección especializada para bancos, cooperativas y 
-                        entidades financieras con protocolos de alta seguridad.
-                    </p>
-                </div>
-                <div class="soluciones__sector-item">
-                    <h3 class="soluciones__sector-title">Sector Industrial</h3>
-                    <p class="soluciones__sector-description">
-                        Seguridad integral para plantas industriales, almacenes 
-                        y centros de distribución con tecnología avanzada.
-                    </p>
-                </div>
-                <div class="soluciones__sector-item">
-                    <h3 class="soluciones__sector-title">Sector Residencial</h3>
-                    <p class="soluciones__sector-description">
-                        Protección para urbanizaciones, condominios y 
-                        residencias privadas con servicios personalizados.
-                    </p>
-                </div>
-                <div class="soluciones__sector-item">
-                    <h3 class="soluciones__sector-title">Sector Gubernamental</h3>
-                    <p class="soluciones__sector-description">
-                        Servicios de seguridad para embajadas, consulados y 
-                        entidades gubernamentales con estándares internacionales.
-                    </p>
+            <div class="soluciones__cta-bottom">
+                <p class="soluciones__cta-text">Descubre más de nuestros servicios</p>
+                <div class="soluciones__cta-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 10L12 15L17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
                 </div>
             </div>
         </div>
@@ -129,16 +84,7 @@
 
     <!-- Sección CTA -->
     <section class="soluciones__cta">
-        <div class="container">
-            <div class="soluciones__cta-content">
-                <h2 class="soluciones__cta-title">¿Necesitas una solución de seguridad personalizada?</h2>
-                <p class="soluciones__cta-description">
-                    Nuestro equipo de expertos está listo para diseñar la estrategia 
-                    de seguridad perfecta para tu empresa o institución.
-                </p>
-                <button class="soluciones__cta-button">Solicitar Consulta</button>
-            </div>
-        </div>
+        
     </section>
 
     <!-- Footer -->
