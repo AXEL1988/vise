@@ -8,13 +8,16 @@
 
 :root {
     /* Paleta VISE Ecuador - Colores Pantone */
-    --primary-color: #021F30;        /* Pantone 2767 CP - Azul Corporativo */
-    --primary-dark: #011622;         /* Azul corporativo oscuro */
+    /*--primary-color: #021F30;        /* Pantone 2767 CP - Azul Corporativo */
+    /*--primary-dark: #011622;         /* Azul corporativo oscuro */
+    --primary-color: #102D3C;  /* Pantone 2767 CP - Azul Corporativo */
+    --primary-dark: #022031;      /* Azul corporativo oscuro */
     --secondary-color: #d32f2f;      /* Rojo Energía (necesito código Pantone específico) */
     --accent-color: #00c853;         /* Pantone 355 C - Verde Acento */
     --accent-light: #4caf50;         /* Verde claro */
     --text-dark: #212121;            /* Gris oscuro - Equilibrio y sobriedad */
-    --text-light: #757575;           /* Gris medio */
+    /*--text-light: #757575;           /* Gris medio */
+    --text-light: #5C6670;           /* Gris medio */
     --text-muted: #9e9e9e;           /* Gris claro */
     --white: #ffffff;
     --light-gray: #fafafa;           /* Fondo claro */
@@ -341,7 +344,7 @@ body {
     font-family: 'Inter', sans-serif;
     font-size: 0.95rem;
     font-weight: 400;
-    color: var(--primary-color);
+    color: #5c6670;
     line-height: 1.3;
     text-align: left;
     margin-bottom: 0;
@@ -367,14 +370,15 @@ body {
     grid-template-columns: repeat(4, 1fr);
     justify-items: center;
     max-width: 1000px;
-    margin: 0 auto;
+    margin-top: 2rem;
 }
 
 .feature__card {
     background-color: var(--white);
+    margin-top: 1rem;
     padding: 0;
     border-radius: 25px;
-    border: 1px solid var(--text-light);
+    border: 1px solid #C6CCD0;
     text-align: center;
     /*box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);*/
     transition: var(--transition);
@@ -407,7 +411,7 @@ body {
 
 .feature__text {
     font-size: 0.9rem;
-    color: var(--text-color);
+    color: #021f30;
     line-height: 1.2;
     font-weight: 400;
     text-align: center;
@@ -421,7 +425,7 @@ body {
 /* Sección CTA */
 .cta {
     padding: 4rem 0;
-    background-color: var(--primary-color);
+    background-color: var(--primary-dark);
     text-align: center;
 }
 
@@ -456,6 +460,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+    margin-top: 80px;
     margin-bottom: 3rem;
     max-width: 1200px;
     margin-left: auto;
@@ -463,7 +468,7 @@ body {
 }
 
 .cta__card {
-    background-color: var(--primary-color);
+    background-color: var(--primary-dark);
     border: 1px solid var(--white);
     border-radius: 15px;
     padding: 2rem 1.5rem;
@@ -482,7 +487,7 @@ body {
     font-weight: 700;
     color: var(--white);
     /*text-align: center;*/
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .cta__card-description {
@@ -494,19 +499,21 @@ body {
 }
 
 .cta__separator {
-    width: 200px;
+    width: 600px;
     height: 2px;
     background-color: var(--white);
-    margin: 0 auto 2rem auto;
+    margin: 80px auto 2rem auto;
 }
 
 .cta__button {
-    background-color: var(--text-light);
+    margin: 50px auto 40px auto;
+    /*margin-bottom: 50px;*/
+    min-width: 800px;
+    background-color: var(--primary-color);
     color: var(--white);
-    border: 2px solid var(--white);
-    padding: 1rem 2.5rem;
-    font-size: 1.1rem;
-    font-weight: 600;
+    border: 1px solid var(--primary-dark);
+    padding: 0.5rem 2.5rem;
+    font-size: 1.5rem;
     border-radius: 25px;
     cursor: pointer;
     transition: var(--transition);
@@ -681,7 +688,6 @@ body {
 }
 
 .footer__cta-title {
-    font-family: 'Montserrat', sans-serif;
     font-size: 2.5rem;
     font-weight: 700;
     color: var(--text-dark);
@@ -690,12 +696,12 @@ body {
 }
 
 .footer__cta-button {
-    background-color: var(--text-muted);
+    background-color: var(--text-light);
     color: var(--white);
     border: none;
-    padding: 0.8rem 3rem;
+    padding: 0.5rem 3rem;
     font-size: 1.5rem;
-    font-weight: 500;
+    /*font-weight: 600;*/
     border-radius: 50px;
     cursor: pointer;
     transition: var(--transition);
@@ -750,19 +756,19 @@ body {
 /* Panel Derecho (Fondo Azul) - 75% del ancho */
 .footer__right-panel {
     flex: 0 0 80%;
-    background-color: var(--primary-color);
+    background-color: var(--primary-dark);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
-    padding: 1.5rem 1rem;
+    padding: 5rem 5rem;
     gap: 1rem;
 }
 
 .footer__nav {
     display: flex;
     flex-direction: column;
-    gap: 0.8rem;
+    /*gap: 0.8rem;*/
     text-align: right;
 }
 
@@ -770,7 +776,7 @@ body {
     color: var(--white);
     text-decoration: none;
     font-family: 'Source Sans Pro', sans-serif;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     font-weight: 500;
     transition: var(--transition);
     padding: 0.2rem 0;
@@ -782,18 +788,18 @@ body {
 }
 
 .footer__social {
-    display: flex;
+    font-size: 2rem;
+    /*display: flex;
     gap: 1rem;
-    margin-top: 0.5rem;
+    margin-top: 1rem;*/
 }
 
 .footer__social-link {
     color: var(--white);
     text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: 600;
+    font-size: 1.8rem;
     transition: var(--transition);
-    padding: 0.3rem;
+    padding: 0.1rem;
 }
 
 .footer__social-link:hover {
@@ -946,6 +952,12 @@ body {
     .footer__logo-image {
         width: 150px;
         height: 150px;
+    }
+
+    .cta__button {
+        min-width: 100%;
+        font-size: 1rem;
+        padding: 0.5rem 2.5rem;
     }
 }
 
