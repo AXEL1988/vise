@@ -1130,6 +1130,241 @@ body {
     margin-bottom: 3rem;
     line-height: 1.3;
 }
+
+/* ===== PÁGINA SOLUCIONES ===== */
+
+/* Hero Section - Soluciones */
+.soluciones__hero {
+    background-image: url('../images/home.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.soluciones__hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(2, 31, 48, 0.7);
+    z-index: 1;
+}
+
+.soluciones__hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: var(--white);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.soluciones__hero-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.soluciones__hero-description {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.6;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Sección Servicios */
+.soluciones__servicios {
+    padding: 5rem 0;
+    background-color: var(--white);
+}
+
+.soluciones__section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.soluciones__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.soluciones__card {
+    background-color: var(--white);
+    border-radius: 15px;
+    padding: 2.5rem;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--border-light);
+}
+
+.soluciones__card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.soluciones__card-icon {
+    margin-bottom: 2rem;
+}
+
+.soluciones__card-icon img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.soluciones__card-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.soluciones__card-description {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-dark);
+}
+
+/* Sección Sectores */
+.soluciones__sectores {
+    padding: 5rem 0;
+    background-color: var(--bg-light);
+}
+
+.soluciones__sectores-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.soluciones__sector-item {
+    background-color: var(--white);
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.soluciones__sector-item:hover {
+    transform: translateY(-3px);
+}
+
+.soluciones__sector-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.soluciones__sector-description {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-dark);
+}
+
+/* Sección CTA */
+.soluciones__cta {
+    padding: 5rem 0;
+    background-color: var(--primary-color);
+    text-align: center;
+}
+
+.soluciones__cta-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.soluciones__cta-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 2rem;
+}
+
+.soluciones__cta-description {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: var(--white);
+    margin-bottom: 3rem;
+    opacity: 0.9;
+}
+
+.soluciones__cta-button {
+    background-color: var(--white);
+    color: var(--primary-color);
+    border: none;
+    padding: 1rem 2.5rem;
+    border-radius: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.soluciones__cta-button:hover {
+    background-color: var(--primary-dark);
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive para Soluciones */
+@media (max-width: 768px) {
+    .soluciones__hero-title {
+        font-size: 2.2rem;
+    }
+    
+    .soluciones__hero-description {
+        font-size: 1.1rem;
+    }
+    
+    .soluciones__section-title {
+        font-size: 2rem;
+    }
+    
+    .soluciones__grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .soluciones__sectores-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .soluciones__cta-title {
+        font-size: 1.8rem;
+    }
+    
+    .soluciones__cta-description {
+        font-size: 1rem;
+    }
+}
 .nosotros__history-stats {
     display: flex;
     flex-direction: column;
