@@ -1480,9 +1480,9 @@ body {
     .soluciones__cta-bottom {
         bottom: 1rem;
         right: 2rem;
-        flex-direction: column;
+    flex-direction: column;
         gap: 0.5rem;
-        align-items: flex-end;
+    align-items: flex-end;
     }
     
     .soluciones__cta-text {
@@ -1505,9 +1505,9 @@ body {
     
     .soluciones__grid {
         grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    
+    gap: 2rem;
+}
+
     .soluciones__sectores-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -2561,7 +2561,7 @@ body {
 
 .tendencias__article-title {
     background-color: var(--primary-dark);
-    font-size: 1.5rem;
+        font-size: 1.5rem;
     font-weight: 400;
     color: var(--white);
     margin-bottom: 1rem;
@@ -2646,6 +2646,186 @@ body {
     }
     
     .tendencias__article-description {
+        font-size: 0.9rem;
+    }
+}
+
+/* ===== SECTORES PAGE STYLES ===== */
+
+/* Intro Section */
+.sectores__intro {
+    background-color: var(--primary-dark);
+    padding: 4rem 15rem 1rem;
+}
+
+.sectores__intro-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.sectores__intro-text {
+    text-align: center;
+    font-size: 1.3rem;
+    line-height: 1.3;
+    color: #6b7a83;
+    margin: 0;
+    padding: 0 2rem;
+}
+
+/* Title Section */
+.sectores__title-section {
+    background-color: var(--primary-dark);
+    padding: 2rem 0 4rem 0;
+    text-align: center;
+}
+
+.sectores__main-title {
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: var(--white);
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+/* Content Section */
+.sectores__content {
+    background-color: var(--primary-dark);
+    padding: 0 0 6rem 0;
+}
+
+.sectores__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sectores__card {
+    background-color: transparent;
+    width: 90%;
+    border: 2px solid #263B49;
+    border-radius: 50px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+}
+
+.sectores__card-image {
+    height: 400px;
+    background-color: var(--secondary-dark);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid #263B49;
+}
+
+.sectores__card-image--financiero {
+    background-image: url('../images/sector-financiero.jpg');
+}
+
+.sectores__card-image--industrial {
+    background-image: url('../images/sector-industrial.jpg');
+}
+
+.sectores__card-image--residencial {
+    background-image: url('../images/sector-residencial.jpg');
+}
+
+.sectores__card-image--comercial {
+    background-image: url('../images/sector-comercial.jpg');
+}
+
+.sectores__card-image--gubernamental {
+    background-image: url('../images/sector-gubernamental.jpg');
+}
+
+.sectores__card-image--eventos {
+    background-image: url('../images/sector-eventos.jpg');
+}
+
+.sectores__card-content {
+    padding: 3rem 2rem;
+    height: 100%;
+    background-color: var(--primary-dark);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.sectores__card-title {
+    background-color: var(--primary-dark);
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--white);
+    margin-bottom: 1rem;
+    line-height: 1;
+    padding: 0 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.sectores__card-description {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+    flex: 1;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .sectores__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .sectores__intro {
+        padding: 3rem 2rem 1rem;
+    }
+    
+    .sectores__intro-text {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+    
+    .sectores__title-section {
+        padding: 1.5rem 0 3rem 0;
+    }
+    
+    .sectores__main-title {
+        font-size: 2.2rem;
+    }
+    
+    .sectores__content {
+        padding: 0 0 4rem 0;
+    }
+    
+    .sectores__grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .sectores__card {
+        width: 100%;
+    }
+    
+    .sectores__card-content {
+        padding: 1.5rem;
+    }
+    
+    .sectores__card-title {
+        font-size: 1.3rem;
+    }
+    
+    .sectores__card-description {
         font-size: 0.9rem;
     }
 }

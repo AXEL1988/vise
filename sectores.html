@@ -31,7 +31,7 @@
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
                         <li class="nav__item">
-                            <a href="#home" class="nav__link">Home<br>Page</a>
+                            <a href="index.html" class="nav__link">Home<br>Page</a>
                         </li>
                         <li class="nav__item">
                             <a href="soluciones.html" class="nav__link">Soluciones<br> de Seguridad</a>
@@ -40,7 +40,7 @@
                             <a href="nosotros.html" class="nav__link">Conoce<br> de Nosotros</a>
                         </li>
                         <li class="nav__item">
-                            <a href="sectores.html" class="nav__link">Sectores <br> de Trabajo</a>
+                            <a href="sectores.html" class="nav__link nav__link--active">Sectores <br> de Trabajo</a>
                         </li>
                         <li class="nav__item">
                             <a href="tendencias.html" class="nav__link">Tendencias <br>del Sector</a>
@@ -59,172 +59,152 @@
         </nav>
     </header>
 
-    <!-- Sección Home -->
-    <section id="home" class="home">
-        <div class="home__card">
-            <div class="home__logo">
-                <img src="images/logo.png" alt="VISE Ecuador">
+    <!-- Sección Hero - Sectores de Trabajo -->
+    <section class="soluciones__hero">
+        <div class="container_soluciones">
+            <div class="soluciones__hero-content">
+                <h1 class="soluciones__hero-title">SECTORES DE TRABAJO</h1>
+                <p class="soluciones__hero-description">
+                    VISE Ecuador ofrece un portafolio completo de servicios de seguridad
+                    diseñados para adaptarse a diferentes entornos. Nuestra combinación de
+                    talento humano, innovación tecnológica y protocolos internacionales asegura
+                    protección real en todo momento.
+                </p>
             </div>
-            <div class="home__content">
-                <p class="home__title">Seguridad que combina <br> <span class="highlight">experiencia, tecnología y confianza</span></p>
-                <p class="home__description">Con más de 23 años de trayectoria en la región, VISE Ecuador ofrece soluciones<br>integrales en seguridad física, electrónica y tecnológica. Somos el aliado de empresas,<br>instituciones y personas que buscan protección confiable con el respaldo<br>de una compañía multinacional.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sección Características -->
-    <section id="soluciones" class="features">
-        <div class="container">
-            <p class="features__title home__title"><span class="highlight">Nuestra fuerza </span>está en lo que nos distingue</p>
-            <!--<h2 class="features__title">Nuestra fuerza está en lo que nos distingue</h2>-->
-            <div class="features__grid">
-                <div class="feature__card">
-                    <div class="feature__icon">
-                        <img src="images/home_1.png" alt="Equipos capacitados">
-                    </div>
-                    <p class="feature__text">Equipos altamente capacitados con trayectoria en múltiples sectores.</p>
-                </div>
-                <div class="feature__card">
-                    <div class="feature__icon">
-                        <img src="images/home_2.png" alt="Innovación constante">
-                    </div>
-                    <p class="feature__text">Innovación constante en sistemas de monitoreo y control.</p>
-                </div>
-                <div class="feature__card">
-                    <div class="feature__icon">
-                        <img src="images/home_3.png" alt="Confianza garantizada">
-                    </div>
-                    <p class="feature__text">Confianza garantizada por una marca con presencia internacional.</p>
-                </div>
-                <div class="feature__card">
-                    <div class="feature__icon">
-                        <img src="images/home_4.png" alt="Soluciones personalizadas">
-                    </div>
-                    <p class="feature__text">Soluciones personalizadas para cada entorno y necesidad.</p>
+            <div class="soluciones__cta-bottom">
+                <p class="soluciones__cta-text">Descubre más de nuestros servicios</p>
+                <div class="soluciones__cta-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 10L12 15L17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Sección CTA -->
-    <section id="sectores" class="cta">
-        <div class="cta__container">
-            <!--<h2 class="cta__title">Soluciones de seguridad adaptadas a cada entorno</h2>-->
-            <p class="features__title cta__title_section "><span class="highlight_section">Soluciones de seguridad </span>adaptadas a cada entorno</p>
-            <p class="cta__subtitle">combinando experiencia, tecnología y atención personalizada.</p>
-            
-            <div class="cta__cards">
-                <div class="cta__card">
-                    <h3 class="cta__card-title">Seguridad Física</h3>
-                    <p class="cta__card-description">Escoltas, seguridad eventual, VIP y unidades caninas.</p>
-                </div>
-                <div class="cta__card">
-                    <h3 class="cta__card-title">Seguridad Electrónica</h3>
-                    <p class="cta__card-description">Videovigilancia, control de accesos, analítica y monitoreo</p>
-                </div>
-                <div class="cta__card">
-                    <h3 class="cta__card-title">Custodia</h3>
-                    <p class="cta__card-description">Custodia de carga y protectores VIP.</p>
-                </div>
-            </div>
-            
-            <div class="cta__separator"></div>
-            
-            <button class="cta__button">Ver todos los servicios</button>
-        </div>
-    </section>
-
-    <!-- Sección Nosotros -->
-    <!-- <section id="nosotros" class="nosotros">
+    <!-- Sección Sectores -->
+    <section class="sectores__content">
         <div class="container">
-            <div class="section__header">
-                <h2 class="section__title">Nosotros</h2>
-                <p class="section__subtitle">Conoce más sobre nuestra empresa</p>
-            </div>
-            <div class="nosotros__content">
-                <div class="nosotros__text">
-                    <p>Aquí irá el contenido sobre la empresa, su historia, misión, visión y valores.</p>
+            <div class="sectores__grid">
+                <!-- Sector 1 -->
+                <div class="sectores__card">
+                    <div class="sectores__card-image sectores__card-image--financiero">
+                    </div>
+                    <div class="sectores__card-content">
+                        <h3 class="sectores__card-title">Petrolero</h3>
+                        <p class="sectores__card-description">
+                            Seguridad especializada para la industria petrolera, refinerías y complejos 
+                            energéticos con protocolos de alta seguridad y cumplimiento ambiental.
+                        </p>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </section> -->
 
-    <!-- Sección Servicios -->
-    <!-- <section id="servicios" class="servicios">
-        <div class="container">
-            <div class="section__header">
-                <h2 class="section__title">Servicios</h2>
-                <p class="section__subtitle">Lo que ofrecemos</p>
-            </div>
-            <div class="servicios__grid">
-                <div class="servicio__card">
-                    <h3>Servicio 1</h3>
-                    <p>Descripción del servicio</p>
+                <!-- Sector 2 -->
+                <div class="sectores__card">
+                    <div class="sectores__card-image sectores__card-image--industrial">
+                    </div>
+                    <div class="sectores__card-content">
+                        <h3 class="sectores__card-title">Industrial</h3>
+                        <p class="sectores__card-description">
+                            Seguridad integral para plantas industriales, fábricas y complejos manufactureros 
+                            con sistemas de vigilancia y control de accesos especializados.
+                        </p>
+                    </div>
                 </div>
-                <div class="servicio__card">
-                    <h3>Servicio 2</h3>
-                    <p>Descripción del servicio</p>
-                </div>
-                <div class="servicio__card">
-                    <h3>Servicio 3</h3>
-                    <p>Descripción del servicio</p>
-                </div>
-            </div>
-        </div>
-    </section> -->
 
-    <!-- Sección Contacto -->
-    <!-- <section id="contacto" class="contacto">
-        <div class="container">
-            <div class="section__header">
-                <h2 class="section__title">Contacto</h2>
-                <p class="section__subtitle">Ponte en contacto con nosotros</p>
-            </div>
-            <div class="contacto__content">
-                <div class="contacto__info">
-                    <h3>Información de Contacto</h3>
-                    <p>Email: info@vise.com</p>
-                    <p>Teléfono: +1 234 567 890</p>
-                    <p>Dirección: Tu dirección aquí</p>
+                <!-- Sector 3 -->
+                <div class="sectores__card">
+                    <div class="sectores__card-image sectores__card-image--residencial">
+                    </div>
+                    <div class="sectores__card-content">
+                        <h3 class="sectores__card-title">Salud</h3>
+                        <p class="sectores__card-description">
+                            Seguridad especializada para hospitales, clínicas y centros de salud con 
+                            protocolos de protección de pacientes y control de accesos médicos.
+                        </p>
+                    </div>
                 </div>
-                <form class="contacto__form">
-                    <div class="form__group">
-                        <input type="text" name="nombre" placeholder="Nombre" required>
+
+                <!-- Sector 4 -->
+                <div class="sectores__card">
+                    <div class="sectores__card-image sectores__card-image--comercial">
                     </div>
-                    <div class="form__group">
-                        <input type="email" name="email" placeholder="Email" required>
+                    <div class="sectores__card-content">
+                        <h3 class="sectores__card-title">Educación</h3>
+                        <p class="sectores__card-description">
+                            Protección especializada para colegios, universidades y centros educativos con 
+                            protocolos de seguridad estudiantil y control de accesos académicos.
+                        </p>
                     </div>
-                    <div class="form__group">
-                        <textarea name="mensaje" placeholder="Mensaje" rows="5" required></textarea>
+                </div>
+
+                <!-- Sector 5 -->
+                <div class="sectores__card">
+                    <div class="sectores__card-image sectores__card-image--gubernamental">
                     </div>
-                    <button type="submit" class="btn btn--primary">Enviar Mensaje</button>
-                </form>
+                    <div class="sectores__card-content">
+                        <h3 class="sectores__card-title">Financiero</h3>
+                        <p class="sectores__card-description">
+                            Seguridad especializada para bancos, cooperativas y entidades financieras con 
+                            protocolos de alta seguridad y cumplimiento regulatorio.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Sector 6 -->
+                <div class="sectores__card">
+                    <div class="sectores__card-image sectores__card-image--eventos">
+                    </div>
+                    <div class="sectores__card-content">
+                        <h3 class="sectores__card-title">Residencial</h3>
+                        <p class="sectores__card-description">
+                            Protección especializada para urbanizaciones, condominios y complejos residenciales 
+                            con servicios de vigilancia 24/7 y control de accesos comunitarios.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Sector 7 -->
+                <div class="sectores__card">
+                    <div class="sectores__card-image sectores__card-image--comercial">
+                    </div>
+                    <div class="sectores__card-content">
+                        <h3 class="sectores__card-title">Comercio</h3>
+                        <p class="sectores__card-description">
+                            Seguridad integral para centros comerciales, tiendas, oficinas y espacios 
+                            comerciales con sistemas de monitoreo y respuesta rápida.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Sector 8 -->
+                <div class="sectores__card">
+                    <div class="sectores__card-image sectores__card-image--gubernamental">
+                    </div>
+                    <div class="sectores__card-content">
+                        <h3 class="sectores__card-title">Eventos</h3>
+                        <p class="sectores__card-description">
+                            Protección especializada para instituciones públicas, embajadas y organismos 
+                            gubernamentales con protocolos de seguridad de nivel internacional.
+                        </p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section> -->
-    
-    <!-- Sección CTA Superior -->
-    <section class="footer__cta-section">
-        <div class="footer__cta-container">
-            <p class="highlight_section_footer_p">Haz de la seguridad <span class="highlight_section_footer">un aliado estratégico.</span></p>
-            <button class="footer__cta-button">Contáctanos o reserva una cita hoy mismo</button>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
+        <!-- Footer Main -->
         <div class="footer__container">
-            <!-- Panel Izquierdo (Fondo Blanco) -->
             <div class="footer__left-panel">
-                <div class="footer__logo-section">
+                <div class="footer__logo">
                     <img src="images/logo.png" alt="VISE Ecuador" class="footer__logo-image">
                 </div>
             </div>
-            
-            <!-- Panel Derecho (Fondo Azul) -->
             <div class="footer__right-panel">
                 <nav class="footer__nav">
-                    <a href="#home" class="footer__nav-link">HOME</a>
+                    <a href="index.html" class="footer__nav-link">HOME</a>
                     <a href="soluciones.html" class="footer__nav-link">SOLUCIONES DE SEGURIDAD</a>
                     <a href="nosotros.html" class="footer__nav-link">CONOCE DE NOSOTROS</a>
                     <a href="sectores.html" class="footer__nav-link">SECTORES DE TRABAJO</a>
@@ -256,11 +236,9 @@
                 </div>
             </div>
         </div>
-        
-        <!-- Franja Inferior -->
-        <div class="footer__bottom-bar"></div>
     </footer>
 
     <script src="js/script.js"></script>
 </body>
 </html>
+
