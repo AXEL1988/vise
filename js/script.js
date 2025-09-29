@@ -188,3 +188,65 @@ function goToTop() {
         behavior: 'smooth'
     });
 }
+
+// ===== MODAL FUNCTIONALITY =====
+
+// Función para abrir modal
+function openModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevenir scroll del body
+    }
+}
+
+// Función para cerrar modal
+function closeModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = 'auto'; // Restaurar scroll del body
+    }
+}
+
+// Event listeners para modales
+document.addEventListener('DOMContentLoaded', function() {
+    // Abrir modal desde botones con data-modal
+    document.addEventListener('click', function(e) {
+        if (e.target.hasAttribute('data-modal')) {
+            e.preventDefault();
+            const modalId = e.target.getAttribute('data-modal');
+            openModal(modalId);
+        }
+    });
+
+    // Cerrar modal desde botón de cerrar
+    document.addEventListener('click', function(e) {
+        if (e.target.closest('.modal__close')) {
+            const modal = e.target.closest('.modal');
+            if (modal) {
+                closeModal(modal.id);
+            }
+        }
+    });
+
+    // Cerrar modal desde overlay
+    document.addEventListener('click', function(e) {
+        if (e.target.classList.contains('modal__overlay')) {
+            const modal = e.target.closest('.modal');
+            if (modal) {
+                closeModal(modal.id);
+            }
+        }
+    });
+
+    // Cerrar modal con tecla Escape
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            const activeModal = document.querySelector('.modal.active');
+            if (activeModal) {
+                closeModal(activeModal.id);
+            }
+        }
+    });
+});
