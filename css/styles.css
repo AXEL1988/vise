@@ -12,6 +12,7 @@
     /*--primary-dark: #011622;         /* Azul corporativo oscuro */
     --primary-color: #102D3C;  /* Pantone 2767 CP - Azul Corporativo */
     --primary-dark: #022031;      /* Azul corporativo oscuro */
+    --secondary-dark: #5C6670;      /* Azul corporativo oscuro */
     --secondary-color: #d32f2f;      /* Rojo Energía (necesito código Pantone específico) */
     --accent-color: #00c853;         /* Pantone 355 C - Verde Acento */
     --accent-light: #4caf50;         /* Verde claro */
@@ -1558,6 +1559,270 @@ body {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+}
+
+/* ===== PÁGINA CONTACTO ===== */
+
+/* Hero Section - Contacto */
+.container_contacto-matriz {
+    padding: 0 6rem;
+}
+
+.container_contacto {
+    padding: 0 6rem;
+}
+.contacto__hero {
+    background-color: var(--secondary-dark);
+    padding: 5rem 0;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.contacto__hero-content {
+    max-width: 750px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contacto__hero-title {
+    font-size: 2.5rem;
+    color: var(--white);
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    font-weight: 500;
+    color: var(--white);
+}
+
+.contacto__hero-text {
+    margin-bottom: 3rem;
+}
+
+.contacto__hero-description {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: var(--white);
+    margin-bottom: 1.2rem;
+    font-weight: 400;
+}
+
+/* Formulario de Contacto */
+.contacto__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contacto__form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.contacto__input {
+    width: 70%;
+    padding: 0.5rem 1.5rem;
+    border: 1px solid var(--white);
+    border-radius: 50px;
+    background-color: var(--secondary-dark);
+    font-size: 1rem;
+    color: var(--white);
+    transition: border-color 0.3s ease;
+}
+
+.contacto__input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.contacto__input::placeholder {
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+.contacto__cta-button {
+    background-color: #4A525A;
+    width: 60%;
+    color: var(--white);
+    border: none;
+    padding: 0.5rem 2rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.contacto__cta-button:hover {
+    background-color: #1A202C;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Sección Visita Nuestra Matriz */
+.contacto__matriz {
+    background-color: var(--secondary-dark);
+    /*padding: 5rem 0;*/
+}
+
+.contacto__matriz-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.contacto__matriz-text {
+    padding: 2rem 0 0 1rem;
+    text-align: right;
+}
+
+.contacto__matriz-title {
+    font-size: 2.5rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: var(--white);
+    text-align: center;
+}
+
+.contacto__matriz-description {
+    font-size: 1rem;
+    line-height: 1;
+    text-align: center;
+    color: var(--white);
+    padding: 0 5rem;
+    margin-bottom: 0.5rem;
+}
+
+.contacto__matriz-map {
+    height: 400px;
+    border: 1px solid var(--white);
+    border-right: none;
+    border-radius: 0px 0px;
+    overflow: hidden;
+    background-image: url('../images/nuestra-matriz.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contacto__map-placeholder {
+    color: var(--white);
+    opacity: 0.7;
+}
+
+/* Sección Únete al Equipo */
+.contacto__equipo {
+    background-color: var(--secondary-dark);
+    padding: 8rem 0 2rem 0;
+    text-align: center;
+}
+
+.contacto__equipo-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contacto__equipo-title {
+    margin-bottom: 1rem;
+    font-size: 2.3rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: var(--white);
+    text-align: center;
+    padding: 0 4rem;
+}
+
+.contacto__equipo-text {
+    margin-bottom: 2rem;
+}
+
+.contacto__equipo-description {
+    font-size: 1rem;
+    line-height: 1;
+    color: var(--white);
+    padding: 0 4rem;
+    margin-bottom: 0.5rem;
+}
+
+.contacto__cta-button-equipo {
+    background-color: #4A525A;
+    width: 30%;
+    color: var(--white);
+    border: none;
+    padding: 0.5rem 2rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.contacto__cta-button-equipo:hover {
+    background-color: #1A202C;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive para Contacto */
+@media (max-width: 768px) {
+    .contacto__hero-title {
+        font-size: 2rem;
+    }
+    
+    .contacto__hero-description {
+        font-size: 1rem;
+    }
+    
+    .contacto__matriz-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .contacto__matriz-text {
+        padding-right: 0;
+        text-align: center;
+    }
+    
+    .contacto__matriz-title {
+        text-align: center;
+        font-size: 1.8rem;
+    }
+    
+    .contacto__matriz-map {
+        height: 300px;
+    }
+    
+    .contacto__equipo-title {
+        font-size: 1.8rem;
+    }
+    
+    .contacto__equipo-description {
+        font-size: 1rem;
+    }
 }
 
 .nosotros__stat {

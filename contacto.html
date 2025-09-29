@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contáctanos - VISE Ecuador</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header y Navegación -->
+    <header class="header">
+        <!-- Primera sección: Fondo blanco con bullets y logo -->
+        <div class="header__top">
+            <div class="header__bullets">
+                <div class="bullet"></div>
+                <div class="bullet"></div>
+                <div class="bullet"></div>
+            </div>
+            <div class="header__logo">
+                <img src="images/logo.png" alt="VISE Ecuador">
+            </div>
+        </div>
+        
+        <!-- Segunda sección: Navegación -->
+        <nav class="nav">
+            <div class="nav__container">
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="index.html" class="nav__link">Home<br>Page</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="soluciones.html" class="nav__link">Soluciones<br> de Seguridad</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="nosotros.html" class="nav__link">Conoce<br> de Nosotros</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="sectores.html" class="nav__link">Sectores <br> de Trabajo</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="tendencias.html" class="nav__link">Tendencias <br>del Sector</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="contacto.html" class="nav__link nav__link--active">Contáctanos</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav__toggle" id="nav-toggle">
+                    <span class="nav__toggle-line"></span>
+                    <span class="nav__toggle-line"></span>
+                    <span class="nav__toggle-line"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Sección Principal - Formulario de Contacto -->
+    <section class="contacto__hero">
+        <div class="container">
+            <div class="contacto__hero-content">
+                <h1 class="contacto__hero-title">Contáctanos para más información</h1>
+                <div class="contacto__hero-text">
+                    <p class="contacto__hero-description">
+                        En VISE Ecuador estamos listos para escucharte y ofrecerte la solución de seguridad 
+                        que mejor se adapte a tus necesidades.
+                    </p>
+                    <p class="contacto__hero-description">
+                        Nuestro equipo de asesores está disponible para responder tus consultas, agendar citas 
+                        y guiarte en cada paso del proceso.
+                    </p>
+                </div>
+                
+                <form class="contacto__form">
+                    <div class="contacto__form-group">
+                        <input type="text" class="contacto__input" placeholder="NOMBRES Y APELLIDOS" required>
+                    </div>
+                    <div class="contacto__form-group">
+                        <input type="email" class="contacto__input" placeholder="CORREO ELECTRÓNICO" required>
+                    </div>
+                    <div class="contacto__form-group">
+                        <input type="tel" class="contacto__input" placeholder="TELÉFONO" required>
+                    </div>
+                    <div class="contacto__form-group">
+                    <button type="submit" class="contacto__cta-button">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+                        </svg>
+                        SOLICITAR CITA
+                    </button>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Visita Nuestra Matriz -->
+    <section class="contacto__matriz">
+        <div class="container_contacto_matriz">
+            <div class="contacto__matriz-content">
+                <div class="contacto__matriz-text">
+                    <h4 class="contacto__matriz-title">Visita Nuestra Matriz</h2>
+                    <p class="contacto__matriz-description">
+                        Te esperamos en nuestra matriz, donde podrás
+                    </p>
+                    <p class="contacto__matriz-description">
+                        conocer de cerca nuestras operaciones
+                    </p>
+                    <p class="contacto__matriz-description">
+                        y el equipo que respalda
+                    </p>
+                    <p class="contacto__matriz-description">
+                        cada solución de seguridad.
+                    </p>
+                    
+                </div>
+                <div class="contacto__matriz-map">
+                    <div class="contacto__map-placeholder">
+                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Únete al Equipo -->
+    <section class="contacto__equipo">
+        <div class="container_contacto">
+            <div class="contacto__equipo-content">
+                <h2 class="contacto__equipo-title">Únete al equipo Vise Ecuador</h2>
+                <div class="contacto__equipo-text">
+                    <p class="contacto__equipo-description">
+                        En VISE Ecuador creemos en el talento de las personas como motor de nuestro
+                    </p>
+                    <p class="contacto__equipo-description">
+                        crecimiento. Si deseas formar parte de un equipo comprometido, innovador y con
+                    </p>
+                    <p class="contacto__equipo-description">
+                        proyección internacional, envíanos tu hoja de vida y da el siguiente paso en tu
+                    
+                        carrera profesional.
+                    </p>
+                </div>
+            </div>
+            <div class="contacto__form-group">
+                <button type="submit" class="contacto__cta-button-equipo">
+                    ADJUNTA TU CV
+                </button>
+                </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__container">
+            <!-- Panel Izquierdo (Fondo Blanco) - 20% del ancho -->
+            <div class="footer__left-panel">
+                <div class="footer__logo-section">
+                    <img src="images/logo.png" alt="VISE Ecuador" class="footer__logo-image">
+                </div>
+            </div>
+            
+            <!-- Panel Derecho (Fondo Azul) - 80% del ancho -->
+            <div class="footer__right-panel">
+                <nav class="footer__nav">
+                    <a href="index.html" class="footer__nav-link">HOME</a>
+                    <a href="soluciones.html" class="footer__nav-link">SOLUCIONES DE SEGURIDAD</a>
+                    <a href="nosotros.html" class="footer__nav-link">CONOCE DE NOSOTROS</a>
+                    <a href="sectores.html" class="footer__nav-link">SECTORES DE TRABAJO</a>
+                    <a href="tendencias.html" class="footer__nav-link">TENDENCIAS DEL SECTOR</a>
+                    <a href="contacto.html" class="footer__nav-link">CONTÁCTANOS</a>
+                </nav>
+                
+                <div class="footer__social">
+                    <a href="#" class="footer__social-link">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="footer__social-link">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="footer__social-link">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="footer__social-link">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Franja Inferior -->
+        <div class="footer__bottom-bar"></div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
