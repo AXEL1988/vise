@@ -2453,3 +2453,199 @@ body {
         padding: 2rem 1.5rem;
     }
 }
+
+/* ===== TENDENCIAS PAGE STYLES ===== */
+
+/* Intro Section */
+.tendencias__intro {
+    background-color: var(--primary-dark);
+    padding: 4rem 15rem 1rem;
+}
+
+.tendencias__intro-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.tendencias__intro-text {
+    text-align: center;
+    font-size: 1.3rem;
+    line-height: 1.3;
+    color: #6b7a83;
+    margin: 0;
+    padding: 0 2rem;
+}
+
+/* Title Section */
+.tendencias__title-section {
+    background-color: var(--primary-dark);
+    padding: 2rem 0 4rem 0;
+    text-align: center;
+}
+
+.tendencias__main-title {
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: var(--white);
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+/* Articles Section */
+.tendencias__articles {
+    background-color: var(--primary-dark);
+    padding: 0 0 6rem 0;
+}
+
+.tendencias__articles-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tendencias__article-card {
+    background-color: transparent;
+    width: 90%;
+    border: 2px solid var(--white);
+    border-radius: 0px 0px 25px 25px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.tendencias__article-image {
+    height: 400px;
+    background-color: var(--secondary-dark);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid var(--white);
+}
+
+.tendencias__article-image--videovigilancia {
+    background-image: url('../images/sector-videovigilancia.jpg');
+}
+
+.tendencias__article-image--biometrico {
+    background-image: url('../images/sector-acceso-biometrico.jpg');
+}
+
+.tendencias__article-image--nuevo-monitoreo {
+    background-image: url('../images/sector-nuevo-monitoreo.jpg');
+}
+
+.tendencias__article-image--ampliamos-nuestro-equipo {
+    background-image: url('../images/sector-ampliamos-nuestro-equipo.jpg');
+}
+
+
+.tendencias__image-placeholder {
+    color: var(--white);
+    opacity: 0.7;
+}
+
+.tendencias__article-content {
+    padding: 3rem 2rem;
+    height: 100%;
+    background-color: var(--primary-dark);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.tendencias__article-title {
+    background-color: var(--primary-dark);
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--white);
+    margin-bottom: 1rem;
+    line-height: 1;
+    padding: 0 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.tendencias__article-description {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+    flex: 1;
+}
+
+.tendencias__article-link {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--white);
+    text-decoration: none;
+    align-self: flex-start;
+    transition: opacity 0.3s ease;
+}
+
+.tendencias__article-link:hover {
+    opacity: 0.8;
+}
+
+.separador__tendencias {
+    width: 100%;
+    margin-top: 8rem;
+    position: relative;
+}
+
+.separador__tendencias::before {
+    content: '';
+    position: absolute;
+    top: -4rem;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--white);
+    opacity: 0.3;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .tendencias__intro {
+        padding: 3rem 0;
+    }
+    
+    .tendencias__intro-text {
+        font-size: 1rem;
+    }
+    
+    .tendencias__title-section {
+        padding: 1.5rem 0 3rem 0;
+    }
+    
+    .tendencias__main-title {
+        font-size: 2.2rem;
+    }
+    
+    .tendencias__articles {
+        padding: 0 0 4rem 0;
+    }
+    
+    .tendencias__articles-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .tendencias__article-content {
+        padding: 1.5rem;
+    }
+    
+    .tendencias__article-title {
+        font-size: 1.1rem;
+    }
+    
+    .tendencias__article-description {
+        font-size: 0.9rem;
+    }
+}
