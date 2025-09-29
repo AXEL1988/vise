@@ -18,38 +18,79 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // Setup ARIA for accessibility
+    if (navToggle) {
+        navToggle.setAttribute('aria-controls', 'nav-menu');
+        navToggle.setAttribute('aria-expanded', 'false');
+        navToggle.setAttribute('aria-label', 'Abrir menú');
+    }
+
+    function openNav() {
+        navMenu.classList.add('show');
+        navToggle.classList.add('active');
+        navToggle.setAttribute('aria-expanded', 'true');
+        navToggle.setAttribute('aria-label', 'Cerrar menú');
+        document.body.classList.add('nav-open');
+    }
+
+    function closeNav() {
+        navMenu.classList.remove('show');
+        navToggle.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
+        navToggle.setAttribute('aria-label', 'Abrir menú');
+        document.body.classList.remove('nav-open');
+    }
+
     // Toggle del menú móvil
     navToggle.addEventListener('click', function() {
-        navMenu.classList.toggle('show');
-        navToggle.classList.toggle('active');
+        if (navMenu.classList.contains('show')) {
+            closeNav();
+        } else {
+            openNav();
+        }
     });
 
     // Cerrar menú al hacer clic en un enlace
     navLinks.forEach(link => {
         link.addEventListener('click', function() {
-            navMenu.classList.remove('show');
-            navToggle.classList.remove('active');
+            closeNav();
         });
     });
 
     // Cerrar menú al hacer clic fuera
     document.addEventListener('click', function(e) {
         if (!navMenu.contains(e.target) && !navToggle.contains(e.target)) {
-            navMenu.classList.remove('show');
-            navToggle.classList.remove('active');
+            closeNav();
         }
+    });
+
+    // Cerrar con tecla Escape
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeNav();
     });
 });
 
 // Smooth scroll para enlaces de navegación
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+        const href = this.getAttribute('href');
+        const target = document.querySelector(href);
         if (target) {
-            const headerHeight = document.querySelector('.header').offsetHeight;
-            const targetPosition = target.offsetTop - headerHeight;
-            
+            e.preventDefault();
+            // Cerrar menú si está abierto antes de desplazar
+            const navMenu = document.getElementById('nav-menu');
+            const navToggle = document.getElementById('nav-toggle');
+            if (navMenu && navMenu.classList.contains('show')) {
+                navMenu.classList.remove('show');
+                if (navToggle) navToggle.classList.remove('active');
+                document.body.classList.remove('nav-open');
+            }
+
+            const header = document.querySelector('.header');
+            const headerHeight = header ? header.offsetHeight : 0;
+            const rawTarget = target.offsetTop - headerHeight;
+            const targetPosition = Math.max(0, rawTarget); // evita valores negativos
+
             window.scrollTo({
                 top: targetPosition,
                 behavior: 'smooth'
@@ -58,6 +99,57 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// ===== CTA slider controls =====
+document.addEventListener('DOMContentLoaded', function() {
+    const track = document.querySelector('#sectores .cta__cards');
+    const prev = document.querySelector('#sectores .cta__prev');
+    const next = document.querySelector('#sectores .cta__next');
+    if (!track) return;
+
+    const getCardWidth = () => track.querySelector('.cta__card')?.getBoundingClientRect().width || 300;
+
+    function scrollByCard(dir) {
+        const delta = getCardWidth() + 16; // include gap
+        track.scrollBy({ left: dir * delta, behavior: 'smooth' });
+    }
+
+    if (prev) prev.addEventListener('click', () => scrollByCard(-1));
+    if (next) next.addEventListener('click', () => scrollByCard(1));
+
+    // Drag / touch support
+    let isDown = false, startX = 0, scrollLeft = 0;
+    track.addEventListener('pointerdown', (e) => {
+        isDown = true;
+        track.setPointerCapture(e.pointerId);
+        startX = e.clientX;
+        scrollLeft = track.scrollLeft;
+    });
+    track.addEventListener('pointermove', (e) => {
+        if (!isDown) return;
+        const dx = e.clientX - startX;
+        track.scrollLeft = scrollLeft - dx;
+    });
+    ['pointerup','pointercancel','pointerleave'].forEach(evt => track.addEventListener(evt, () => { isDown = false; }));
+});
+
+// ===== Shorten CTA text on small screens =====
+document.addEventListener('DOMContentLoaded', function() {
+    const ctaBtn = document.querySelector('.footer__cta-button');
+    if (!ctaBtn) return;
+    const longText = 'Contáctanos o reserva una cita hoy mismo';
+    const shortText = 'Contáctanos o reserva una cita';
+
+    function updateCtaText() {
+        if (window.matchMedia('(max-width: 480px)').matches) {
+            ctaBtn.textContent = shortText;
+        } else {
+            ctaBtn.textContent = longText;
+        }
+    }
+
+    updateCtaText();
+    window.addEventListener('resize', updateCtaText);
+});
 // Efecto de scroll en el header
 window.addEventListener('scroll', function() {
     const header = document.querySelector('.header');

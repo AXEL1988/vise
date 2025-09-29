@@ -31,7 +31,7 @@
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
                         <li class="nav__item">
-                            <a href="#home" class="nav__link">Home<br>Page</a>
+                            <a href="#home" class="nav__link" data-close-menu>Home<br>Page</a>
                         </li>
                         <li class="nav__item">
                             <a href="soluciones.html" class="nav__link">Soluciones<br> de Seguridad</a>
@@ -60,7 +60,7 @@
     </header>
 
     <!-- Sección Home -->
-    <section id="home" class="home">
+    <section id="home" class="home" style="scroll-margin-top: 100px;">
         <div class="home__card">
             <div class="home__logo">
                 <img src="images/logo.png" alt="VISE Ecuador">
@@ -127,87 +127,25 @@
                     <p class="cta__card-description">Custodia de carga y protectores VIP.</p>
                 </div>
             </div>
+
+            <!-- Controles del slider -->
+            <div class="cta__nav">
+                <button class="cta__nav-btn cta__prev" aria-label="Anterior" type="button">&#10094;</button>
+                <button class="cta__nav-btn cta__next" aria-label="Siguiente" type="button">&#10095;</button>
+            </div>
             
             <div class="cta__separator"></div>
             
-            <button class="cta__button">Ver todos los servicios</button>
+            <a class="cta__button" href="soluciones.html">Ver todos los servicios</a>
         </div>
     </section>
 
-    <!-- Sección Nosotros -->
-    <!-- <section id="nosotros" class="nosotros">
-        <div class="container">
-            <div class="section__header">
-                <h2 class="section__title">Nosotros</h2>
-                <p class="section__subtitle">Conoce más sobre nuestra empresa</p>
-            </div>
-            <div class="nosotros__content">
-                <div class="nosotros__text">
-                    <p>Aquí irá el contenido sobre la empresa, su historia, misión, visión y valores.</p>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
-    <!-- Sección Servicios -->
-    <!-- <section id="servicios" class="servicios">
-        <div class="container">
-            <div class="section__header">
-                <h2 class="section__title">Servicios</h2>
-                <p class="section__subtitle">Lo que ofrecemos</p>
-            </div>
-            <div class="servicios__grid">
-                <div class="servicio__card">
-                    <h3>Servicio 1</h3>
-                    <p>Descripción del servicio</p>
-                </div>
-                <div class="servicio__card">
-                    <h3>Servicio 2</h3>
-                    <p>Descripción del servicio</p>
-                </div>
-                <div class="servicio__card">
-                    <h3>Servicio 3</h3>
-                    <p>Descripción del servicio</p>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
-    <!-- Sección Contacto -->
-    <!-- <section id="contacto" class="contacto">
-        <div class="container">
-            <div class="section__header">
-                <h2 class="section__title">Contacto</h2>
-                <p class="section__subtitle">Ponte en contacto con nosotros</p>
-            </div>
-            <div class="contacto__content">
-                <div class="contacto__info">
-                    <h3>Información de Contacto</h3>
-                    <p>Email: info@vise.com</p>
-                    <p>Teléfono: +1 234 567 890</p>
-                    <p>Dirección: Tu dirección aquí</p>
-                </div>
-                <form class="contacto__form">
-                    <div class="form__group">
-                        <input type="text" name="nombre" placeholder="Nombre" required>
-                    </div>
-                    <div class="form__group">
-                        <input type="email" name="email" placeholder="Email" required>
-                    </div>
-                    <div class="form__group">
-                        <textarea name="mensaje" placeholder="Mensaje" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn--primary">Enviar Mensaje</button>
-                </form>
-            </div>
-        </div>
-    </section> -->
     
     <!-- Sección CTA Superior -->
     <section class="footer__cta-section">
         <div class="footer__cta-container">
             <p class="highlight_section_footer_p">Haz de la seguridad <span class="highlight_section_footer">un aliado estratégico.</span></p>
-            <button class="footer__cta-button">Contáctanos o reserva una cita hoy mismo</button>
+            <a class="footer__cta-button" href="contacto.html">Contáctanos o reserva una cita hoy mismo</a>
         </div>
     </section>
 
