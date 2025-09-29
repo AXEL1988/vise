@@ -4,6 +4,20 @@ document.addEventListener('DOMContentLoaded', function() {
     const navMenu = document.getElementById('nav-menu');
     const navLinks = document.querySelectorAll('.nav__link');
 
+    // Mark active nav link based on current page
+    const currentPage = (window.location.pathname.split('/').pop() || 'index.html').toLowerCase();
+    const allLinks = document.querySelectorAll('.nav__link, .footer__nav-link');
+    allLinks.forEach(link => {
+        const href = (link.getAttribute('href') || '').toLowerCase();
+        // Normalize index root path
+        const normalizedHref = href === '' || href === '#' ? 'index.html' : href;
+        if (normalizedHref.endsWith(currentPage)) {
+            link.classList.add('nav__link--active');
+        } else {
+            link.classList.remove('nav__link--active');
+        }
+    });
+
     // Toggle del menú móvil
     navToggle.addEventListener('click', function() {
         navMenu.classList.toggle('show');
