@@ -1600,11 +1600,10 @@ body {
 }
 
 .contacto__hero-description {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 1.5;
     color: var(--white);
-    margin-bottom: 1.2rem;
+    /* margin-bottom: 1.2rem; */
     font-weight: 400;
 }
 
