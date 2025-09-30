@@ -2235,6 +2235,10 @@ body {
         margin: 1rem 0rem;
         justify-content: flex-start;
     }
+    
+    .home__logo {
+        display: none;
+    }
 
     .home__content {
         justify-content: flex-start;
