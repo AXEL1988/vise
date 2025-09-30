@@ -1020,8 +1020,8 @@ body {
 }
 
 .grupo-logo-image {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     object-fit: contain;
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 }
@@ -1129,6 +1129,210 @@ body {
     color: var(--white);
     text-align: left;
     margin: 0;
+}
+
+/* Sección Certificaciones */
+.nosotros__certificaciones {
+    background-color: var(--primary-dark);
+    padding: 4rem 0;
+    color: var(--white);
+}
+
+.nosotros__certificaciones-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--white);
+}
+
+.nosotros__certificaciones-description {
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+    color: var(--white);
+    opacity: 0.9;
+}
+
+.certificaciones__slider {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.certificaciones__cards {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(210px, 200px);
+    gap: 2rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 1rem 0;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.certificaciones__cards::-webkit-scrollbar {
+    display: none;
+}
+
+.certificaciones__card {
+    background-color: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    scroll-snap-align: start;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.certificaciones__card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.certificaciones__image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 1.5rem;
+}
+
+.certificaciones__nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.certificaciones__nav-btn {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--white);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.certificaciones__nav-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: scale(1.1);
+}
+
+.certificaciones__nav-btn:active {
+    transform: scale(0.95);
+}
+
+.certificaciones__indicators {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+.certificaciones__indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.certificaciones__indicator.active {
+    background: var(--white);
+    transform: scale(1.2);
+}
+
+.certificaciones__indicator:hover {
+    background: rgba(255, 255, 255, 0.6);
+}
+
+/* Responsive para Certificaciones */
+@media (max-width: 1024px) {
+    .certificaciones__cards {
+        grid-auto-columns: minmax(220px, 280px);
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .nosotros__certificaciones {
+        padding: 3rem 0;
+    }
+    
+    .nosotros__certificaciones-title {
+        font-size: 2rem;
+    }
+    
+    .nosotros__certificaciones-description {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+        padding: 0 1rem;
+    }
+    
+    .certificaciones__cards {
+        grid-auto-columns: minmax(180px, 220px);
+        gap: 1rem;
+        padding: 0.5rem 0;
+    }
+    
+    .certificaciones__card {
+        min-height: 130px;
+        max-height: 150px;
+    }
+    
+    .certificaciones__image {
+        padding: 0.8rem;
+        max-height: 120px;
+    }
+    
+    .certificaciones__nav-btn {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+@media (max-width: 480px) {
+    .certificaciones__cards {
+        grid-auto-columns: 90%;
+        gap: 0.8rem;
+    }
+    
+    .certificaciones__card {
+        min-height: 100px;
+        max-height: 120px;
+    }
+    
+    .certificaciones__image {
+        padding: 0.5rem;
+        max-height: 100px;
+    }
+    
+    .certificaciones__nav-btn {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .certificaciones__indicator {
+        width: 10px;
+        height: 10px;
+    }
 }
 
 /* Responsive para Valores Corporativos */

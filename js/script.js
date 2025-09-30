@@ -355,4 +355,99 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     });
+
+    // Slider de Certificaciones
+    const certSlider = document.querySelector('.certificaciones__cards');
+    const certPrevBtn = document.getElementById('cert-prev');
+    const certNextBtn = document.getElementById('cert-next');
+    const certIndicators = document.querySelectorAll('.certificaciones__indicator');
+    
+    if (certSlider && certPrevBtn && certNextBtn) {
+        let currentSlide = 0;
+        const totalSlides = certSlider.children.length;
+        
+        // Función para actualizar indicadores
+        function updateIndicators() {
+            certIndicators.forEach((indicator, index) => {
+                indicator.classList.toggle('active', index === currentSlide);
+            });
+        }
+        
+        // Función para mover al slide específico
+        function goToSlide(slideIndex) {
+            const cardWidth = certSlider.children[0].offsetWidth + 32; // width + gap
+            certSlider.scrollTo({
+                left: slideIndex * cardWidth,
+                behavior: 'smooth'
+            });
+            currentSlide = slideIndex;
+            updateIndicators();
+        }
+        
+        // Botón anterior
+        certPrevBtn.addEventListener('click', () => {
+            currentSlide = currentSlide > 0 ? currentSlide - 1 : totalSlides - 1;
+            goToSlide(currentSlide);
+        });
+        
+        // Botón siguiente
+        certNextBtn.addEventListener('click', () => {
+            currentSlide = currentSlide < totalSlides - 1 ? currentSlide + 1 : 0;
+            goToSlide(currentSlide);
+        });
+        
+        // Indicadores
+        certIndicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => {
+                goToSlide(index);
+            });
+        });
+        
+        // Auto-scroll desactivado - solo controles manuales
+        
+        // Touch/drag support
+        let isDragging = false;
+        let startX = 0;
+        let scrollLeft = 0;
+        
+        certSlider.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            startX = e.pageX - certSlider.offsetLeft;
+            scrollLeft = certSlider.scrollLeft;
+        });
+        
+        certSlider.addEventListener('mouseleave', () => {
+            isDragging = false;
+        });
+        
+        certSlider.addEventListener('mouseup', () => {
+            isDragging = false;
+        });
+        
+        certSlider.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+            e.preventDefault();
+            const x = e.pageX - certSlider.offsetLeft;
+            const walk = (x - startX) * 2;
+            certSlider.scrollLeft = scrollLeft - walk;
+        });
+        
+        // Touch events
+        certSlider.addEventListener('touchstart', (e) => {
+            isDragging = true;
+            startX = e.touches[0].pageX - certSlider.offsetLeft;
+            scrollLeft = certSlider.scrollLeft;
+        });
+        
+        certSlider.addEventListener('touchend', () => {
+            isDragging = false;
+        });
+        
+        certSlider.addEventListener('touchmove', (e) => {
+            if (!isDragging) return;
+            const x = e.touches[0].pageX - certSlider.offsetLeft;
+            const walk = (x - startX) * 2;
+            certSlider.scrollLeft = scrollLeft - walk;
+        });
+    }
 });
