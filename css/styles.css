@@ -832,7 +832,7 @@ body {
 .footer__social-link {
     color: var(--white);
     text-decoration: none;
-    font-size: 1.8rem;
+    font-size: 2rem;
     transition: var(--transition);
     padding: 0.1rem;
 }
@@ -2226,6 +2226,8 @@ body {
     justify-content: center;
     gap: 0.5rem;
     margin-top: 1rem;
+    margin-bottom: 4rem;
+    text-decoration: none;
 }
 
 .contacto__cta-button-equipo:hover {
@@ -2236,6 +2238,10 @@ body {
 
 /* Responsive para Contacto */
 @media (max-width: 768px) {
+
+    .container_contacto {
+        padding: 0;
+    }
     .contacto__hero-title {
         font-size: 2rem;
     }
@@ -2262,6 +2268,11 @@ body {
     .contacto__matriz-map {
         height: 300px;
     }
+
+    .contacto__matriz-description {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
     
     .contacto__equipo-title {
         font-size: 1.8rem;
@@ -2269,6 +2280,17 @@ body {
     
     .contacto__equipo-description {
         font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .contacto__cta-button {
+        width: 70%;
+        font-size: 1rem;
+    }
+
+    .contacto__cta-button-equipo {
+        width: 70%;
+        margin-bottom: 3rem;
     }
 }
 
@@ -2747,7 +2769,7 @@ body {
     }
 
     .footer__social-link {
-        font-size: 1.1rem;
+        font-size: 1.5rem;
     }
 
     /* Responsive Nosotros */
@@ -2905,7 +2927,7 @@ body {
     }
 
     .footer__social-link {
-        font-size: 1.1rem;
+        font-size: 1.5rem;
     }
 
     /* Responsive Nosotros Móvil */
@@ -3032,7 +3054,7 @@ body {
 
 .tendencias__article-card {
     background-color: transparent;
-    width: 90%;
+    width: 100%;
     border: 2px solid var(--white);
     border-radius: 0px 0px 25px 25px;
     overflow: hidden;
@@ -3153,7 +3175,7 @@ body {
     }
     
     .tendencias__articles {
-        padding: 0 0 4rem 0;
+        padding: 2.5rem 1.5rem;
     }
     
     .tendencias__articles-grid {
@@ -3329,7 +3351,7 @@ body {
     }
     
     .sectores__content {
-        padding: 0 0 4rem 0;
+        padding: 2.5rem 1.5rem;
     }
     
     .sectores__grid {

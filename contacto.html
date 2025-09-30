@@ -77,15 +77,15 @@
                     </p>
                 </div>
                 
-                <form class="contacto__form">
+                <form class="contacto__form" id="formularioCita">
                     <div class="contacto__form-group">
-                        <input type="text" class="contacto__input" placeholder="NOMBRES Y APELLIDOS" required>
+                        <input type="text" class="contacto__input" id="nombre" placeholder="NOMBRES Y APELLIDOS" required>
                     </div>
                     <div class="contacto__form-group">
-                        <input type="email" class="contacto__input" placeholder="CORREO ELECTRÓNICO" required>
+                        <input type="email" class="contacto__input" id="correo" placeholder="CORREO ELECTRÓNICO" required>
                     </div>
                     <div class="contacto__form-group">
-                        <input type="tel" class="contacto__input" placeholder="TELÉFONO" required>
+                        <input type="tel" class="contacto__input" id="telefono" placeholder="TELÉFONO" required>
                     </div>
                     <div class="contacto__form-group">
                     <button type="submit" class="contacto__cta-button">
@@ -152,10 +152,16 @@
                 </div>
             </div>
             <div class="contacto__form-group">
-                <button type="submit" class="contacto__cta-button-equipo">
+                <!-- <a href="mailto:reclutamiento.vise@senapro.com" class="contacto__cta-button-equipo">
+                    ADJUNTA TU CV
+                </a> -->
+                <button type="button" class="contacto__cta-button-equipo" onclick="enviarCorreo()">
                     ADJUNTA TU CV
                 </button>
-                </div>
+            </div>
+            <div class="contacto__form-group">
+               
+            </div>
         </div>
     </section>
 
@@ -210,5 +216,52 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <script>
+        document.getElementById("formularioCita").addEventListener("submit", function(event) {
+            event.preventDefault();
+    
+            const nombre = document.getElementById("nombre").value.trim();
+            const correo = document.getElementById("correo").value.trim();
+            const telefono = document.getElementById("telefono").value.trim();
+    
+            if (!nombre || !correo || !telefono) {
+                alert("Por favor completa todos los campos.");
+                return;
+            }
+    
+            const numeroWhatsApp = "593999206671"; // Cambia este número
+    
+            const mensaje = `Hola, quiero solicitar una cita.
+Mi nombre es: ${nombre}
+Correo: ${correo}
+Teléfono: ${telefono}`;
+    
+            const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURI(mensaje)}`;
+    
+            window.open(url, "_blank");
+        });
+
+        function enviarCorreo() {
+            const email = "reclutamiento.vise@senapro.com";
+            const subject = "Adjunto mi CV";
+            const encodedSubject = encodeURIComponent(subject);
+    
+            const gmailURL = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodedSubject}`;
+            const mailtoURL = `mailto:${email}?subject=${encodedSubject}`;
+    
+            // Detectamos si el usuario está en móvil o tiene preferencia por Gmail
+            const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+            const prefersGmail = navigator.userAgent.includes("Chrome") && !navigator.userAgent.includes("Edg");
+    
+            if (isMobile || prefersGmail) {
+                // Abrimos Gmail en nueva pestaña
+                window.open(gmailURL, "_blank");
+            } else {
+                // Intentamos abrir cliente de correo local
+                window.location.href = mailtoURL;
+            }
+        }
+
+    </script>
 </body>
 </html>
