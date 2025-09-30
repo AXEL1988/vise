@@ -1098,7 +1098,7 @@ body {
 }
 
 .nosotros__valores-left {
-    background-image: url('../images/valores.jpg');
+    background-image: url('../images/home.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1809,8 +1809,8 @@ body {
     
     .soluciones__cards-grid {
         width: 100%;
-        display: flex;
-        flex-direction: column;
+    display: flex;
+    flex-direction: column;
         gap: 1.5rem;
     }
     
@@ -1924,7 +1924,7 @@ body {
     }
     
     .soluciones__cards-grid {
-        gap: 1rem;
+    gap: 1rem;
     }
     
     .soluciones__card {
@@ -3272,40 +3272,28 @@ body {
     border-bottom: 2px solid #263B49;
 }
 
-.sectores__card-image--petrolero {
-    background-image: url('../images/sectores/petrolero.jpg');
+.sectores__card-image--financiero {
+    background-image: url('../images/sector-financiero.jpg');
 }
 
 .sectores__card-image--industrial {
-    background-image: url('../images/sectores/industrial.jpg');
-}
-
-.sectores__card-image--salud {
-    background-image: url('../images/sectores/salud.jpg');
-}
-
-.sectores__card-image--educacion {
-    background-image: url('../images/sectores/educacion.jpg');
+    background-image: url('../images/sector-industrial.jpg');
 }
 
 .sectores__card-image--residencial {
-    background-image: url('../images/sectores/residencial.jpg');
+    background-image: url('../images/sector-residencial.jpg');
 }
 
 .sectores__card-image--comercial {
-    background-image: url('../images/sectores/comercio.jpg');
+    background-image: url('../images/sector-comercial.jpg');
 }
 
 .sectores__card-image--gubernamental {
-    background-image: url('../images/sectores/industrial.jpg');
-}
-
-.sectores__card-image--financiero {
-    background-image: url('../images/sectores/financiero.jpg');
+    background-image: url('../images/sector-gubernamental.jpg');
 }
 
 .sectores__card-image--eventos {
-    background-image: url('../images/sectores/eventos.jpg');
+    background-image: url('../images/sector-eventos.jpg');
 }
 
 .sectores__card-content {
