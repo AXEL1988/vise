@@ -3272,28 +3272,40 @@ body {
     border-bottom: 2px solid #263B49;
 }
 
-.sectores__card-image--financiero {
-    background-image: url('../images/sector-financiero.jpg');
+.sectores__card-image--petrolero {
+    background-image: url('../images/sectores/petrolero.jpg');
 }
 
 .sectores__card-image--industrial {
-    background-image: url('../images/sector-industrial.jpg');
+    background-image: url('../images/sectores/industrial.jpg');
+}
+
+.sectores__card-image--salud {
+    background-image: url('../images/sectores/salud.jpg');
+}
+
+.sectores__card-image--educacion {
+    background-image: url('../images/sectores/educacion.jpg');
 }
 
 .sectores__card-image--residencial {
-    background-image: url('../images/sector-residencial.jpg');
+    background-image: url('../images/sectores/residencial.jpg');
 }
 
 .sectores__card-image--comercial {
-    background-image: url('../images/sector-comercial.jpg');
+    background-image: url('../images/sectores/comercio.jpg');
 }
 
 .sectores__card-image--gubernamental {
-    background-image: url('../images/sector-gubernamental.jpg');
+    background-image: url('../images/sectores/industrial.jpg');
+}
+
+.sectores__card-image--financiero {
+    background-image: url('../images/sectores/financiero.jpg');
 }
 
 .sectores__card-image--eventos {
-    background-image: url('../images/sector-eventos.jpg');
+    background-image: url('../images/sectores/eventos.jpg');
 }
 
 .sectores__card-content {
