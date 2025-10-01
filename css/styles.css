@@ -1141,6 +1141,22 @@ body {
     height: 100px;
     object-fit: contain;
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    transition: all 0.3s ease;
+}
+
+.nosotros__grupo-logo a {
+    display: inline-block;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+}
+
+.nosotros__grupo-logo a:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.nosotros__grupo-logo a:hover .grupo-logo-image {
+    filter: brightness(1.1) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
 }
 
 .grupo-logo-text {
@@ -3132,6 +3148,10 @@ body {
     .grupo-logo-image {
         width: 60px;
         height: 60px;
+    }
+    
+    .nosotros__grupo-logo a:hover {
+        transform: translateY(-3px) scale(1.03);
     }
 
     .nosotros__history-stats {
