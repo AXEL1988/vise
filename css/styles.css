@@ -920,6 +920,62 @@ body {
     text-shadow: 0 0 8px rgba(0, 200, 83, 0.3);
 }
 
+/* Estilo especial para "Trabaja con nosotros" */
+.nav__link--cta {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: white !important;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    position: relative;
+    overflow: hidden;
+    animation: cta-pulse 3s infinite;
+    box-shadow: 0 4px 15px rgba(16, 45, 60, 0.4);
+    transition: all 0.3s ease;
+    border: 2px solid var(--accent-color);
+}
+
+.nav__link--cta:hover {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(16, 45, 60, 0.6);
+    animation: none;
+    border-color: var(--accent-color);
+}
+
+.nav__link--cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.nav__link--cta:hover::before {
+    left: 100%;
+}
+
+/* Animación de pulso para CTA */
+@keyframes cta-pulse {
+    0% {
+        box-shadow: 0 4px 15px rgba(16, 45, 60, 0.4);
+        border-color: var(--accent-color);
+    }
+    50% {
+        box-shadow: 0 4px 25px rgba(16, 45, 60, 0.8);
+        border-color: var(--accent-light);
+    }
+    100% {
+        box-shadow: 0 4px 15px rgba(16, 45, 60, 0.4);
+        border-color: var(--accent-color);
+    }
+}
+
 /* Sección ¿Quiénes Somos? */
 .nosotros__quienes-somos {
     padding: 0;
@@ -2040,6 +2096,12 @@ body {
     .footer__social-link[href*="wa.me"] {
         animation-duration: 5s;
     }
+    
+    .nav__link--cta {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.8rem;
+        animation-duration: 5s;
+    }
     .soluciones__servicios-cards { 
         padding: 2rem 1rem; 
     }
@@ -2647,6 +2709,12 @@ body {
 
     .nav__toggle.active .nav__toggle-line:nth-child(3) {
         transform: rotate(-45deg) translate(7px, -6px);
+    }
+    
+    .nav__link--cta {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+        animation-duration: 4s;
     }
 
     /* Prevent body scroll when menu is open and add overlay */
