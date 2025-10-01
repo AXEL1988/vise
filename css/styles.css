@@ -823,23 +823,84 @@ body {
 }
 
 .footer__social {
-    font-size: 2rem;
-    /*display: flex;
-    gap: 1rem;
-    margin-top: 1rem;*/
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    align-items: center;
+    justify-content: center;
 }
 
 .footer__social-link {
     color: var(--white);
     text-decoration: none;
-    font-size: 2rem;
-    transition: var(--transition);
-    padding: 0.1rem;
+    font-size: 2.5rem;
+    transition: all 0.3s ease;
+    padding: 0.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    position: relative;
+    overflow: hidden;
 }
 
 .footer__social-link:hover {
     color: var(--accent-color);
-    transform: translateY(-2px);
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 8px 25px rgba(0, 200, 83, 0.3);
+}
+
+/* Estilo especial para WhatsApp */
+.footer__social-link[href*="wa.me"] {
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    color: white;
+    animation: whatsapp-pulse 2s infinite;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+}
+
+.footer__social-link[href*="wa.me"]:hover {
+    background: linear-gradient(135deg, #128C7E, #25D366);
+    transform: translateY(-5px) scale(1.15);
+    box-shadow: 0 12px 30px rgba(37, 211, 102, 0.6);
+    animation: none;
+}
+
+.footer__social-link[href*="wa.me"] svg {
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+/* Animación de pulso para WhatsApp */
+@keyframes whatsapp-pulse {
+    0% {
+        box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    }
+    50% {
+        box-shadow: 0 4px 25px rgba(37, 211, 102, 0.8);
+    }
+    100% {
+        box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    }
+}
+
+/* Efectos para otros iconos */
+.footer__social-link[href*="facebook"]:hover {
+    background: linear-gradient(135deg, #1877F2, #0A5FCC);
+    color: white;
+    box-shadow: 0 8px 25px rgba(24, 119, 242, 0.4);
+}
+
+.footer__social-link[href*="linkedin"]:hover {
+    background: linear-gradient(135deg, #0077B5, #005885);
+    color: white;
+    box-shadow: 0 8px 25px rgba(0, 119, 181, 0.4);
+}
+
+.footer__social-link[href*="instagram"]:hover {
+    background: linear-gradient(135deg, #E4405F, #C13584, #833AB4);
+    color: white;
+    box-shadow: 0 8px 25px rgba(228, 64, 95, 0.4);
 }
 
 /* Franja Inferior */
@@ -1098,7 +1159,7 @@ body {
 }
 
 .nosotros__valores-left {
-    background-image: url('../images/home.jpg');
+    background-image: url('../images/valores.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1965,6 +2026,20 @@ body {
 
 /* Micro-breakpoint específico soluciones (375px) */
 @media (max-width: 375px) {
+    .footer__social {
+        gap: 0.6rem;
+    }
+    
+    .footer__social-link {
+        font-size: 1.6rem;
+        width: 40px;
+        height: 40px;
+        padding: 0.3rem;
+    }
+    
+    .footer__social-link[href*="wa.me"] {
+        animation-duration: 5s;
+    }
     .soluciones__servicios-cards { 
         padding: 2rem 1rem; 
     }
@@ -2769,8 +2844,18 @@ body {
         font-size: 0.8rem;
     }
 
+    .footer__social {
+        gap: 1rem;
+    }
+    
     .footer__social-link {
-        font-size: 1.5rem;
+        font-size: 2rem;
+        width: 50px;
+        height: 50px;
+    }
+    
+    .footer__social-link[href*="wa.me"] {
+        animation-duration: 3s;
     }
 
     /* Responsive Nosotros */
@@ -2927,8 +3012,18 @@ body {
         font-size: 0.8rem;
     }
 
+    .footer__social {
+        gap: 0.8rem;
+    }
+    
     .footer__social-link {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
+        width: 45px;
+        height: 45px;
+    }
+    
+    .footer__social-link[href*="wa.me"] {
+        animation-duration: 4s;
     }
 
     /* Responsive Nosotros Móvil */
@@ -3273,27 +3368,39 @@ body {
 }
 
 .sectores__card-image--financiero {
-    background-image: url('../images/sector-financiero.jpg');
+    background-image: url('../images/sectores/financiero.jpg');
 }
 
 .sectores__card-image--industrial {
-    background-image: url('../images/sector-industrial.jpg');
+    background-image: url('../images/sectores/industrial.jpg');
 }
 
 .sectores__card-image--residencial {
-    background-image: url('../images/sector-residencial.jpg');
+    background-image: url('../images/sectores/residencial.jpg');
 }
 
 .sectores__card-image--comercial {
-    background-image: url('../images/sector-comercial.jpg');
+    background-image: url('../images/sectores/comercio.jpg');
 }
 
 .sectores__card-image--gubernamental {
-    background-image: url('../images/sector-gubernamental.jpg');
+    background-image: url('../images/sectores/eventos.jpg');
 }
 
 .sectores__card-image--eventos {
-    background-image: url('../images/sector-eventos.jpg');
+    background-image: url('../images/sectores/eventos.jpg');
+}
+
+.sectores__card-image--salud {
+    background-image: url('../images/sectores/salud.jpg');
+}
+
+.sectores__card-image--educacion {
+    background-image: url('../images/sectores/educacion.jpg');
+}
+
+.sectores__card-image--petrolero {
+    background-image: url('../images/sectores/petrolero.jpg');
 }
 
 .sectores__card-content {
