@@ -272,7 +272,7 @@ body {
 .home {
     min-height: 80vh;
     max-height: 493px;
-    background-image: url('../images/home.jpg');
+    background-image: url('../images/home.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -979,11 +979,11 @@ body {
 /* Sección ¿Quiénes Somos? */
 .nosotros__quienes-somos {
     padding: 0;
-    background-image: url('../images/home.jpg');
+    background-image: url('../images/nuestra-matriz.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 70vh;
+    min-height: 75vh;
     display: flex;
     align-items: flex-end;
     position: relative;
@@ -1664,15 +1664,15 @@ body {
 }
 
 .soluciones__card-image--fisica {
-    background-image: url('../images/seguridad-fisica.jpg');
+    background-image: url('../images/seguridad-fisica.webp');
 }
 
 .soluciones__card-image--electronica {
-    background-image: url('../images/seguridad-electronica.jpg');
+    background-image: url('../images/seguridad-electronica.webp');
 }
 
 .soluciones__card-image--otros {
-    background-image: url('../images/seguridad-otros.jpg');
+    background-image: url('../images/seguridad-otros.webp');
 }
 
 .soluciones__card-placeholder {
@@ -1867,11 +1867,11 @@ body {
     }
     
     .soluciones__card {
-        margin-left: 2rem;
+        margin-left: 0;
     }
     
     .soluciones__card--full {
-        margin-left: 2rem;
+        margin-left: 0;
     }
 }
 
@@ -2314,7 +2314,7 @@ body {
     border-right: none;
     border-radius: 0px 0px;
     overflow: hidden;
-    background-image: url('../images/nuestra-matriz.jpg');
+    background-image: url('../images/nuestra-matriz.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -3259,19 +3259,19 @@ body {
 }
 
 .tendencias__article-image--videovigilancia {
-    background-image: url('../images/sector-videovigilancia.jpg');
+    background-image: url('../images/sector-videovigilancia.webp');
 }
 
 .tendencias__article-image--biometrico {
-    background-image: url('../images/sector-acceso-biometrico.jpg');
+    background-image: url('../images/sector-acceso-biometrico.webp');
 }
 
 .tendencias__article-image--nuevo-monitoreo {
-    background-image: url('../images/sector-nuevo-monitoreo.jpg');
+    background-image: url('../images/sector-nuevo-monitoreo.webp');
 }
 
 .tendencias__article-image--ampliamos-nuestro-equipo {
-    background-image: url('../images/sector-ampliamos-nuestro-equipo.jpg');
+    background-image: url('../images/sector-ampliamos-nuestro-equipo.webp');
 }
 
 
@@ -3456,39 +3456,39 @@ body {
 }
 
 .sectores__card-image--financiero {
-    background-image: url('../images/sectores/financiero.jpg');
+    background-image: url('../images/sectores/financiero.webp');
 }
 
 .sectores__card-image--industrial {
-    background-image: url('../images/sectores/industrial.jpg');
+    background-image: url('../images/sectores/industrial.webp');
 }
 
 .sectores__card-image--residencial {
-    background-image: url('../images/sectores/residencial.jpg');
+    background-image: url('../images/sectores/residencial.webp');
 }
 
 .sectores__card-image--comercial {
-    background-image: url('../images/sectores/comercio.jpg');
+    background-image: url('../images/sectores/comercio.webp');
 }
 
 .sectores__card-image--gubernamental {
-    background-image: url('../images/sectores/eventos.jpg');
+    background-image: url('../images/sectores/eventos.webp');
 }
 
 .sectores__card-image--eventos {
-    background-image: url('../images/sectores/eventos.jpg');
+    background-image: url('../images/sectores/eventos.webp');
 }
 
 .sectores__card-image--salud {
-    background-image: url('../images/sectores/salud.jpg');
+    background-image: url('../images/sectores/salud.webp');
 }
 
 .sectores__card-image--educacion {
-    background-image: url('../images/sectores/educacion.jpg');
+    background-image: url('../images/sectores/educacion.webp');
 }
 
 .sectores__card-image--petrolero {
-    background-image: url('../images/sectores/petrolero.jpg');
+    background-image: url('../images/sectores/petrolero.webp');
 }
 
 .sectores__card-content {

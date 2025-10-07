@@ -205,7 +205,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Validación básica
             if (!nombre || !email || !mensaje) {
-                alert('Por favor, completa todos los campos');
+                //alert('Por favor, completa todos los campos');
                 return;
             }
             
@@ -217,7 +217,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
             
             // Mostrar mensaje de éxito
-            alert('¡Mensaje enviado correctamente! Te contactaremos pronto.');
+            //alert('¡Mensaje enviado correctamente! Te contactaremos pronto.');
             
             // Limpiar formulario
             form.reset();
