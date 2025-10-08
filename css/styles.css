@@ -2392,18 +2392,43 @@ body {
     border-right: none;
     border-radius: 0px 0px;
     overflow: hidden;
-    background-image: url('../images/nuestra-matriz.webp');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: relative;
+    background-color: #f0f0f0;
 }
 
-.contacto__map-placeholder {
+.contacto__map-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    filter: grayscale(20%) contrast(1.1);
+}
+
+.contacto__map-overlay {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: rgba(16, 45, 60, 0.9);
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contacto__map-info h3 {
     color: var(--white);
-    opacity: 0.7;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.contacto__map-info p {
+    color: var(--white);
+    font-size: 0.9rem;
+    margin: 0;
+    opacity: 0.9;
+    font-family: 'Source Sans Pro', sans-serif;
+    line-height: 1.4;
 }
 
 /* Sección Únete al Equipo */
@@ -2525,6 +2550,20 @@ body {
     
     .contacto__matriz-map {
         height: 300px;
+    }
+    
+    .contacto__map-overlay {
+        top: 15px;
+        left: 15px;
+        padding: 0.8rem 1rem;
+    }
+    
+    .contacto__map-info h3 {
+        font-size: 1rem;
+    }
+    
+    .contacto__map-info p {
+        font-size: 0.8rem;
     }
 
     .contacto__matriz-description {
@@ -4307,3 +4346,44 @@ body {
   .modal__features-card {
    padding: 2.5rem 0;
   }
+
+/* Estilos responsive adicionales para el mapa de contacto */
+@media (max-width: 480px) {
+    .contacto__matriz-map {
+        height: 250px;
+    }
+    
+    .contacto__map-overlay {
+        top: 10px;
+        left: 10px;
+        padding: 0.6rem 0.8rem;
+    }
+    
+    .contacto__map-info h3 {
+        font-size: 0.9rem;
+    }
+    
+    .contacto__map-info p {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .contacto__matriz-map {
+        height: 200px;
+    }
+    
+    .contacto__map-overlay {
+        top: 8px;
+        left: 8px;
+        padding: 0.5rem 0.6rem;
+    }
+    
+    .contacto__map-info h3 {
+        font-size: 0.8rem;
+    }
+    
+    .contacto__map-info p {
+        font-size: 0.7rem;
+    }
+}
