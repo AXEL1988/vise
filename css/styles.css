@@ -4033,6 +4033,22 @@ body {
         padding: 0 0.5rem;
     }
     
+    .card__modal {
+        width: 100%;
+        max-width: 300px;
+        min-height: 180px;
+        padding: 50px 15px 15px;
+    }
+    
+    .card__modal h2 {
+        font-size: 20px;
+    }
+    
+    .card__modal p {
+        font-size: 15px;
+        line-height: 1.3;
+    }
+    
     .modal__features-card {
         width: 100%;
         max-width: 300px;
@@ -4100,6 +4116,21 @@ body {
         max-width: 300px;
     }
     
+    .card__modal {
+        max-width: 280px;
+        min-height: 160px;
+        padding: 45px 12px 12px;
+    }
+    
+    .card__modal h2 {
+        font-size: 18px;
+    }
+    
+    .card__modal p {
+        font-size: 14px;
+        line-height: 1.2;
+    }
+    
     .modal__feature-card {
         margin-top: 30px;
     }
@@ -4114,6 +4145,21 @@ body {
     
     .modal__features-card {
         max-width: 280px;
+    }
+    
+    .card__modal {
+        max-width: 260px;
+        min-height: 150px;
+        padding: 40px 10px 10px;
+    }
+    
+    .card__modal h2 {
+        font-size: 16px;
+    }
+    
+    .card__modal p {
+        font-size: 13px;
+        line-height: 1.2;
     }
     
     .modal__feature-card {
@@ -4163,13 +4209,16 @@ body {
 .card__modal {
     position: relative;
     width: 320px;
-    height: 200px;
+    min-height: 200px;
     background: var(--primary-dark);
     border: 2px solid #2b3c4d;
     border-radius: 25px;
     padding: 60px 20px 20px;
     color: white;
     text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
   }
 
   /* Círculo contenedor */
@@ -4218,12 +4267,15 @@ body {
   .card__modal h2 {
     margin: 0;
     font-size: 22px;
+    flex-shrink: 0;
   }
 
   .card__modal p {
     margin-top: 10px;
     font-size: 16px;
     color: #d0d4d8;
+    flex-grow: 1;
+    line-height: 1.4;
   }
 
   .modal__features-card {
