@@ -983,6 +983,321 @@ body {
     box-shadow: 0 8px 25px rgba(228, 64, 95, 0.4);
 }
 
+/* Nueva Sección Footer */
+.footer__new-section {
+    background-color: var(--primary-dark);
+    color: var(--white);
+}
+
+/* Primera Fila: 3 Columnas de Contacto (Marrón/Naranja) */
+.footer__contact-row {
+    background-color: var(--primary-dark); /* Color marrón/naranja */
+    padding: 0;
+    width: 100%;
+}
+
+/* Estilos específicos para la primera columna (Atención al Empleado) */
+.footer__contact-column--empleado {
+    background-color: var(--primary-color) !important;
+    display: flex !important;
+    align-items: center !important;
+    text-align: left !important;
+    padding: 2rem !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+    flex: 1;
+    width: 33.333%;
+    color: var(--text-light);
+}
+
+.footer__contact-left {
+    flex: 0 0 auto;
+    margin-right: 2rem;
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.8s ease-out;
+}
+
+.footer__contact-left.animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.footer__contact-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: all 0.8s ease-out 0.2s;
+}
+
+.footer__contact-right.animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.footer__contact-column--empleado .footer__contact-icon {
+    color: var(--text-light);
+    margin: 0 !important;
+    width: 80px;
+    height: 80px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.footer__contact-column--empleado .footer__contact-icon:hover {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    background-color: var(--accent-color);
+    color: var(--white);
+}
+
+.footer__contact-column--empleado .footer__contact-title {
+    margin-bottom: 1rem !important;
+    text-align: left !important;
+    font-size: 1rem;
+}
+
+.footer__contact-column--empleado .footer__contact-info {
+    margin-bottom: 0 !important;
+}
+
+.footer__contact-column--empleado .footer__contact-info p {
+    margin: 0.3rem 0 !important;
+    text-align: left !important;
+    font-size: 1rem;
+}
+
+.footer__contact-column--empleado .footer__contact-arrow {
+    position: static !important;
+    margin-top: 1rem;
+    align-self: flex-start;
+}
+
+/* Animaciones específicas para cada columna */
+.footer__contact-column--empleado .footer__contact-left {
+    transition-delay: 0.1s;
+}
+
+.footer__contact-column--empleado .footer__contact-right {
+    transition-delay: 0.3s;
+}
+
+.footer__contact-column--ubicacion .footer__contact-left {
+    transition-delay: 0.2s;
+}
+
+.footer__contact-column--ubicacion .footer__contact-right {
+    transition-delay: 0.4s;
+}
+
+.footer__contact-column--cliente .footer__contact-left {
+    transition-delay: 0.3s;
+}
+
+.footer__contact-column--cliente .footer__contact-right {
+    transition-delay: 0.5s;
+}
+
+/* Estilos específicos para la segunda columna (Donde Nos Encontramos) */
+.footer__contact-column--ubicacion {
+    background-color: var(--text-light) !important;
+    display: flex !important;
+    align-items: center !important;
+    text-align: left !important;
+    padding: 2rem !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+    flex: 1;
+    width: 33.333%;
+}
+
+.footer__contact-column--ubicacion .footer__contact-icon {
+    margin: 0 !important;
+    width: 80px;
+    height: 80px;
+    background-color: var(--white);
+    color: var(--text-light);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.footer__contact-column--ubicacion .footer__contact-icon:hover {
+    transform: scale(1.1) rotate(-5deg);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    background-color: var(--accent-color);
+    color: var(--white);
+}
+
+.footer__contact-column--ubicacion .footer__contact-title {
+    margin-bottom: 1rem !important;
+    text-align: left !important;
+    font-size: 1rem;
+    color: var(--white);
+}
+
+.footer__contact-column--ubicacion .footer__contact-info {
+    margin-bottom: 1rem !important;
+}
+
+.footer__contact-column--ubicacion .footer__contact-info p {
+    margin: 0.3rem 0 !important;
+    text-align: left !important;
+    font-size: 1.1rem;
+    color: var(--white);
+}
+
+.footer__contact-column--ubicacion .footer__contact-button {
+    margin-top: 0 !important;
+    align-self: flex-start;
+}
+
+/* Estilos específicos para la tercera columna (Atención al Cliente) */
+.footer__contact-column--cliente {
+    background-color: var(--primary-color) !important;
+    display: flex !important;
+    align-items: center !important;
+    text-align: left !important;
+    padding: 2rem !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+    flex: 1;
+    width: 33.333%;
+}
+
+.footer__contact-column--cliente .footer__contact-icon {
+    margin: 0 !important;
+    width: 80px;
+    height: 80px;
+    background-color: var(--white);
+    color: var(--primary-dark);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.footer__contact-column--cliente .footer__contact-icon:hover {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    background-color: var(--accent-color);
+    color: var(--white);
+}
+
+.footer__contact-column--cliente .footer__contact-title {
+    margin-bottom: 1rem !important;
+    text-align: left !important;
+    font-size: 1rem;
+    color: var(--white);
+}
+
+.footer__contact-column--cliente .footer__contact-info {
+    margin-bottom: 0 !important;
+}
+
+.footer__contact-column--cliente .footer__contact-info p {
+    margin: 0.3rem 0 !important;
+    text-align: left !important;
+    font-size: 1rem;
+    color: var(--white);
+}
+
+.footer__contact-grid {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    gap: 0;
+}
+
+.footer__contact-column {
+    text-align: center;
+    padding: 2rem 1rem;
+    position: relative;
+}
+
+.footer__contact-icon {
+    width: 60px;
+    height: 60px;
+    background-color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem auto;
+    color: #8B4513;
+}
+
+.footer__contact-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.footer__contact-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer__contact-info {
+    margin-bottom: 1.5rem;
+}
+
+.footer__contact-info p {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1rem;
+    color: var(--white);
+    margin: 0.5rem 0;
+    line-height: 1.4;
+}
+
+.footer__contact-arrow {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    color: #FF6B35; /* Color naranja para la flecha */
+    opacity: 0.8;
+}
+
+.footer__contact-arrow svg {
+    width: 16px;
+    height: 16px;
+}
+
+.footer__contact-button {
+    background-color: #4A90E2; /* Azul para el botón */
+    color: var(--white);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.footer__contact-button:hover {
+    background-color: #357ABD;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
+}
+
+/* Segunda Fila: Vacía por el momento */
+.footer__empty-row {
+    background-color: var(--primary-dark);
+    padding: 2rem 0;
+    width: 100%;
+    min-height: 100px;
+}
+
 /* Franja Inferior */
 .footer__bottom-bar {
     width: 100%;
@@ -3300,6 +3615,123 @@ body {
     
     .footer__social-link[href*="wa.me"] {
         animation-duration: 4s;
+    }
+
+    /* Responsive para las nuevas secciones del footer */
+    .footer__contact-grid {
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+    }
+    
+    .footer__contact-column {
+        padding: 1.5rem 1rem;
+    }
+    
+    .footer__contact-icon {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 1rem;
+    }
+    
+    .footer__contact-icon svg {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .footer__contact-title {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .footer__contact-info p {
+        font-size: 0.9rem;
+    }
+    
+    .footer__contact-button {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.8rem;
+    }
+    
+    .footer__contact-arrow {
+        display: none; /* Ocultar flecha en móvil */
+    }
+    
+    /* Responsive para la primera columna con layout de dos columnas */
+    .footer__contact-column--empleado {
+        flex-direction: column !important;
+        text-align: center !important;
+        margin: 0 !important;
+        width: 100% !important;
+        flex: none !important;
+        color: var(--text-light);
+    }
+    
+    .footer__contact-left {
+        margin-right: 0 !important;
+        margin-bottom: 1rem;
+    }
+    
+    .footer__contact-right {
+        align-items: center;
+    }
+    
+    .footer__contact-column--empleado .footer__contact-title {
+        text-align: center !important;
+    }
+    
+    .footer__contact-column--empleado .footer__contact-info p {
+        text-align: center !important;
+    }
+    
+    .footer__contact-column--empleado .footer__contact-arrow {
+        align-self: center !important;
+    }
+    
+    /* Responsive para la segunda columna con layout de dos columnas */
+    .footer__contact-column--ubicacion {
+        flex-direction: column !important;
+        text-align: center !important;
+        margin: 0 !important;
+        width: 100% !important;
+        flex: none !important;
+    }
+    
+    .footer__contact-column--ubicacion .footer__contact-title {
+        text-align: center !important;
+    }
+    
+    .footer__contact-column--ubicacion .footer__contact-info p {
+        text-align: center !important;
+    }
+    
+    .footer__contact-column--ubicacion .footer__contact-button {
+        align-self: center !important;
+    }
+    
+    /* Responsive para la tercera columna con layout de dos columnas */
+    .footer__contact-column--cliente {
+        flex-direction: column !important;
+        text-align: center !important;
+        margin: 0 !important;
+        width: 100% !important;
+        flex: none !important;
+    }
+    
+    .footer__contact-column--cliente .footer__contact-title {
+        text-align: center !important;
+    }
+    
+    .footer__contact-column--cliente .footer__contact-info p {
+        text-align: center !important;
+    }
+    
+    /* Animaciones de hover en móvil - más suaves */
+    .footer__contact-column--empleado .footer__contact-icon:hover,
+    .footer__contact-column--ubicacion .footer__contact-icon:hover,
+    .footer__contact-column--cliente .footer__contact-icon:hover {
+        transform: scale(1.05) rotate(2deg);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
     }
 
     /* Responsive Nosotros Móvil */

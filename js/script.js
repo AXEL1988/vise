@@ -451,3 +451,42 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+// Animación de entrada para las columnas del footer
+document.addEventListener('DOMContentLoaded', function() {
+    const footerContactRow = document.querySelector('.footer__contact-row');
+    
+    if (footerContactRow) {
+        const observerOptions = {
+            threshold: 0.3,
+            rootMargin: '0px 0px -100px 0px'
+        };
+        
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Animar iconos (left)
+                    const leftElements = entry.target.querySelectorAll('.footer__contact-left');
+                    leftElements.forEach((element, index) => {
+                        setTimeout(() => {
+                            element.classList.add('animate');
+                        }, index * 200); // Delay escalonado
+                    });
+                    
+                    // Animar contenido (right)
+                    const rightElements = entry.target.querySelectorAll('.footer__contact-right');
+                    rightElements.forEach((element, index) => {
+                        setTimeout(() => {
+                            element.classList.add('animate');
+                        }, (index * 200) + 300); // Delay escalonado + offset
+                    });
+                    
+                    // Desconectar el observer después de la primera animación
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        
+        observer.observe(footerContactRow);
+    }
+});
