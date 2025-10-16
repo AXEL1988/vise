@@ -1,0 +1,87 @@
+# 🚫 Archivos a ignorar en Git
+
+# 📁 Backup de imágenes originales
+images_backup/
+images_original/
+
+# 🐍 Archivos de Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# 🔧 Archivos de desarrollo
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# 📝 Archivos temporales
+*.tmp
+*.temp
+*.log
+*.swp
+*.swo
+*~
+
+# 🗂️ Carpetas de sistema
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# 📦 Archivos de optimización
+optimize_images.py
+deploy_*.md
+
+# 🌐 Archivos de deploy
+.vercel
+.netlify
+.vercelignore
+
+# 📊 Archivos de análisis
+lighthouse-report.html
+lighthouse-report.json
+
+# 🔒 Archivos sensibles
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# 📱 Archivos de PWA (si se agregan en el futuro)
+sw.js
+manifest.json
+service-worker.js
+
+# 🎨 Archivos de diseño (si se agregan)
+*.sketch
+*.fig
+*.psd
+*.ai
+
+# 📄 Documentación temporal
+TODO.md
+NOTES.md
+CHANGELOG.md
