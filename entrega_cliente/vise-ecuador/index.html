@@ -31,7 +31,7 @@
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
                         <li class="nav__item">
-                            <a href="index.html" class="nav__link">Home<br>Page</a>
+                            <a href="#home" class="nav__link" data-close-menu>Home<br>Page</a>
                         </li>
                         <li class="nav__item">
                             <a href="soluciones.html" class="nav__link">Soluciones<br> de Seguridad</a>
@@ -40,7 +40,7 @@
                             <a href="nosotros.html" class="nav__link">Conoce<br> de Nosotros</a>
                         </li>
                         <li class="nav__item">
-                            <a href="sectores.html" class="nav__link nav__link--active">Sectores <br> de Trabajo</a>
+                            <a href="sectores.html" class="nav__link">Sectores <br> de Trabajo</a>
                         </li>
                         <li class="nav__item">
                             <a href="tendencias.html" class="nav__link">Tendencias <br>del Sector</a>
@@ -62,156 +62,133 @@
         </nav>
     </header>
 
-    <!-- Sección Hero - Sectores de Trabajo -->
-    <section class="soluciones__hero">
-        <div class="container_soluciones">
-            <div class="soluciones__hero-content">
-                <h1 class="soluciones__hero-title">SECTORES DE TRABAJO</h1>
-                <p class="soluciones__hero-description">
-                    VISE Ecuador ofrece un portafolio completo de servicios de seguridad
-                    diseñados para adaptarse a diferentes entornos. Nuestra combinación de
-                    talento humano, innovación tecnológica y protocolos internacionales asegura
-                    protección real en todo momento.
-                </p>
+    <!-- Sección Home -->
+    <section id="home" class="home" style="scroll-margin-top: 100px;">
+        <div class="home__card">
+            <div class="home__logo">
+                <img src="images/logo.png" alt="VISE Ecuador">
             </div>
-            <div class="soluciones__cta-bottom">
-                <p class="soluciones__cta-text">Descubre más de nuestros servicios</p>
-                <div class="soluciones__cta-icon">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M7 10L12 15L17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </div>
+            <div class="home__content">
+                <p class="home__title">Seguridad combinada con <br> <span class="highlight">experiencia, tecnología y confianza</span></p>
+                <p class="home__description">Con más de 24 años de trayectoria en la región, VISE Ecuador ofrece soluciones<br>integrales en seguridad física, electrónica y tecnológica. Somos el aliado de empresas,<br>instituciones y personas que buscan protección confiable con el respaldo<br>de una compañía multinacional.</p>
             </div>
         </div>
     </section>
 
-    <!-- Sección Sectores -->
-    <section class="sectores__content">
+    <!-- Sección Características -->
+    <section id="soluciones" class="features">
         <div class="container">
-            <div class="sectores__grid">
-                <!-- Sector 1 -->
-                <div class="sectores__card">
-                    <div class="sectores__card-image sectores__card-image--financiero">
+            <p class="features__title home__title"><span class="highlight">Nos distingue </span>nuestro</p>
+            <!--<h2 class="features__title">Nuestra fuerza está en lo que nos distingue</h2>-->
+            <div class="features__grid">
+                <div class="feature__card">
+                    <div class="feature__icon">
+                        <img src="images/Vise1.webp" alt="Equipos capacitados">
                     </div>
-                    <div class="sectores__card-content">
-                        <h3 class="sectores__card-title">Financiero</h3>
-                        <p class="sectores__card-description">
-                            Seguridad especializada para bancos, cooperativas y entidades financieras con 
-                            protocolos de alta seguridad y cumplimiento regulatorio.
-                        </p>
-                    </div>
+                    <p class="feature__text">Equipo altamente capacitado con trayectoria en múltiples sectores.</p>
                 </div>
-                
-
-                <!-- Sector 2 -->
-                <div class="sectores__card">
-                    <div class="sectores__card-image sectores__card-image--industrial">
+                <div class="feature__card">
+                    <div class="feature__icon">
+                        <img src="images/Vise10.webp" alt="Innovación constante">
                     </div>
-                    <div class="sectores__card-content">
-                        <h3 class="sectores__card-title">Industrial</h3>
-                        <p class="sectores__card-description">
-                            Seguridad integral para plantas industriales, fábricas y complejos manufactureros 
-                            con sistemas de vigilancia y control de accesos especializados.
-                        </p>
-                    </div>
+                    <p class="feature__text">Innovación constante en sistemas de monitoreo y control.</p>
                 </div>
-
-                <!-- Sector 3 -->
-                <div class="sectores__card">
-                    <div class="sectores__card-image sectores__card-image--salud">
+                <div class="feature__card">
+                    <div class="feature__icon">
+                        <img src="images/Vise4.webp" alt="Confianza garantizada">
                     </div>
-                    <div class="sectores__card-content">
-                        <h3 class="sectores__card-title">Salud</h3>
-                        <p class="sectores__card-description">
-                            Seguridad especializada para hospitales, clínicas y centros de salud con 
-                            protocolos de protección de pacientes y control de accesos médicos.
-                        </p>
-                    </div>
+                    <p class="feature__text">Confianza garantizada por una marca con presencia internacional.</p>
                 </div>
-
-                <!-- Sector 4 -->
-                <div class="sectores__card">
-                    <div class="sectores__card-image sectores__card-image--educacion">
+                <div class="feature__card">
+                    <div class="feature__icon">
+                        <img src="images/Vise2.webp" alt="Soluciones personalizadas">
                     </div>
-                    <div class="sectores__card-content">
-                        <h3 class="sectores__card-title">Educación</h3>
-                        <p class="sectores__card-description">
-                            Protección especializada para colegios, universidades y centros educativos con 
-                            protocolos de seguridad estudiantil y control de accesos académicos.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Sector 5 -->
-                <div class="sectores__card">
-                    <div class="sectores__card-image sectores__card-image--petrolero">
-                    </div>
-                    <div class="sectores__card-content">
-                        <h3 class="sectores__card-title">Petrolero</h3>
-                        <p class="sectores__card-description">
-                            Seguridad especializada para la industria petrolera, refinerías y complejos 
-                            energéticos con protocolos de alta seguridad y cumplimiento ambiental.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Sector 6 -->
-                <div class="sectores__card">
-                    <div class="sectores__card-image sectores__card-image--residencial">
-                    </div>
-                    <div class="sectores__card-content">
-                        <h3 class="sectores__card-title">Residencial</h3>
-                        <p class="sectores__card-description">
-                            Protección especializada para urbanizaciones, condominios y complejos residenciales 
-                            con servicios de vigilancia 24/7 y control de accesos comunitarios.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Sector 7 -->
-                <div class="sectores__card">
-                    <div class="sectores__card-image sectores__card-image--comercial">
-                    </div>
-                    <div class="sectores__card-content">
-                        <h3 class="sectores__card-title">Comercio</h3>
-                        <p class="sectores__card-description">
-                            Seguridad integral para centros comerciales, tiendas, oficinas y espacios 
-                            comerciales con sistemas de monitoreo y respuesta rápida.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Sector 8 -->
-                <div class="sectores__card">
-                    <div class="sectores__card-image sectores__card-image--gubernamental">
-                    </div>
-                    <div class="sectores__card-content">
-                        <h3 class="sectores__card-title">Aeropuertario</h3>
-                        <p class="sectores__card-description">
-                            Protección especializada para aeropuertos, terminales y complejos aeroportuarios con 
-                            protocolos de seguridad y cumplimiento regulatorio.
-                        </p>
-                    </div>
+                    <p class="feature__text">Soluciones personalizadas para cada entorno y necesidad.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Sección CTA -->
+    <section id="sectores" class="cta">
+        <div class="cta__container">
+            <!--<h2 class="cta__title">Soluciones de seguridad adaptadas a cada entorno</h2>-->
+            <p class="features__title cta__title_section "><span class="highlight_section">Soluciones de seguridad </span>adaptadas a cada entorno</p>
+            <p class="cta__subtitle">Combinamos lo mejor de la experiencia humana de la mano de la tecnología.</p>
+            
+            <div class="cta__cards">
+                <div class="cta__card">
+                    <h3 class="cta__card-title">Seguridad Física</h3>
+                    <p class="cta__card-description">Guardias, seguridad para eventos y unidades caninas.</p>
+                </div>
+                <div class="cta__card">
+                    <h3 class="cta__card-title">Seguridad Electrónica</h3>
+                    <p class="cta__card-description">Videovigilancia, control de accesos, analítica y monitoreo</p>
+                </div>
+                <div class="cta__card">
+                    <h3 class="cta__card-title">Custodia</h3>
+                    <p class="cta__card-description">Custodia de carga y protectores VIP.</p>
+                </div>
+            </div>
+
+            <!-- Controles del slider -->
+            <!-- <div class="cta__nav">
+                <button class="cta__nav-btn cta__prev" aria-label="Anterior" type="button">&#10094;</button>
+                <button class="cta__nav-btn cta__next" aria-label="Siguiente" type="button">&#10095;</button>
+            </div> -->
+            
+            <div class="cta__separator"></div>
+            
+            <a class="cta__button" href="soluciones.html">Ver todos los servicios</a>
+        </div>
+    </section>
+
+    
+    <!-- Sección CTA Superior -->
+    <section class="footer__cta-section">
+        <div class="footer__cta-container">
+            <p class="highlight_section_footer_p">Haz de la seguridad <span class="highlight_section_footer">un aliado estratégico.</span></p>
+            <a class="footer__cta-button" href="contacto.html">Contáctanos</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="footer">
+        <div class="footer__container">
+            <!-- Panel Izquierdo (Fondo Blanco) -->
+            <div class="footer__left-panel">
+                <div class="footer__logo-section">
+                    <img src="images/logo.png" alt="VISE Ecuador" class="footer__logo-image" loading="lazy">
+                </div>
+            </div>
+            
+            <!-- Panel Derecho (Fondo Azul) -->
+            <div class="footer__right-panel">
+                <nav class="footer__nav">
+                    <a href="#home" class="footer__nav-link">HOME</a>
+                    <a href="soluciones.html" class="footer__nav-link">SOLUCIONES DE SEGURIDAD</a>
+                    <a href="nosotros.html" class="footer__nav-link">CONOCE DE NOSOTROS</a>
+                    <a href="sectores.html" class="footer__nav-link">SECTORES DE TRABAJO</a>
+                    <a href="tendencias.html" class="footer__nav-link">TENDENCIAS DEL SECTOR</a>
+                    <a href="contacto.html" class="footer__nav-link">CONTÁCTANOS</a>
+                </nav>
+            </div>
+        </div>
+        
         <!-- Nueva Sección Footer -->
         <div class="footer__new-section">
             <!-- Primera Fila: 3 Columnas de Contacto (Marrón/Naranja) -->
             <div class="footer__contact-row">
                 <div class="footer__contact-grid">
-                    <!-- Columna 1: Atención al Empleado -->
-                    <div class="footer__contact-column footer__contact-column--empleado">
-                        <div class="footer__contact-left">
-                            <div class="footer__contact-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 1c-4.97 0-9 4.03-9 9 0 1.29.27 2.51.75 3.62L1 22l8.38-2.75C10.49 19.73 11.71 20 13 20c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-1.5 13.5c-.28 0-.5-.22-.5-.5s.22-.5.5-.5.5.22.5.5-.22.5-.5.5zm2.5 0c-.28 0-.5-.22-.5-.5s.22-.5.5-.5.5.22.5.5-.22.5-.5.5zm2.5 0c-.28 0-.5-.22-.5-.5s.22-.5.5-.5.5.22.5.5-.22.5-.5.5z"/>
-                                </svg>
+                        <!-- Columna 1: Atención al Empleado -->
+                        <div class="footer__contact-column footer__contact-column--empleado">
+                            <div class="footer__contact-left">
+                                <div class="footer__contact-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 1c-4.97 0-9 4.03-9 9 0 1.29.27 2.51.75 3.62L1 22l8.38-2.75C10.49 19.73 11.71 20 13 20c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-1.5 13.5c-.28 0-.5-.22-.5-.5s.22-.5.5-.5.5.22.5.5-.22.5-.5.5zm2.5 0c-.28 0-.5-.22-.5-.5s.22-.5.5-.5.5.22.5.5-.22.5-.5.5zm2.5 0c-.28 0-.5-.22-.5-.5s.22-.5.5-.5.5.22.5.5-.22.5-.5.5z"/>
+                                    </svg>
+                                </div>
                             </div>
-                        </div>
                         <div class="footer__contact-right">
                             <h3 class="footer__contact-title">ATENCIÓN AL EMPLEADO</h3>
                             <div class="footer__contact-info">
@@ -221,15 +198,15 @@
                         </div>
                     </div>
 
-                    <!-- Columna 2: Donde Nos Encontramos -->
-                    <div class="footer__contact-column footer__contact-column--ubicacion">
-                        <div class="footer__contact-left">
-                            <div class="footer__contact-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                                </svg>
+                        <!-- Columna 2: Donde Nos Encontramos -->
+                        <div class="footer__contact-column footer__contact-column--ubicacion">
+                            <div class="footer__contact-left">
+                                <div class="footer__contact-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                    </svg>
+                                </div>
                             </div>
-                        </div>
                         <div class="footer__contact-right">
                             <h3 class="footer__contact-title">DONDE NOS ENCONTRAMOS</h3>
                             <div class="footer__contact-info">
@@ -241,15 +218,15 @@
                         </div>
                     </div>
 
-                    <!-- Columna 3: Atención al Cliente -->
-                    <div class="footer__contact-column footer__contact-column--cliente">
-                        <div class="footer__contact-left">
-                            <div class="footer__contact-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-                                </svg>
+                        <!-- Columna 3: Atención al Cliente -->
+                        <div class="footer__contact-column footer__contact-column--cliente">
+                            <div class="footer__contact-left">
+                                <div class="footer__contact-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                                    </svg>
+                                </div>
                             </div>
-                        </div>
                         <div class="footer__contact-right">
                             <h3 class="footer__contact-title">ATENCIÓN AL CLIENTE</h3>
                             <div class="footer__contact-info">
