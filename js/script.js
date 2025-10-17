@@ -4,14 +4,31 @@ document.addEventListener('DOMContentLoaded', function() {
     const navMenu = document.getElementById('nav-menu');
     const navLinks = document.querySelectorAll('.nav__link');
 
-    // Mark active nav link based on current page
+    // Mark active nav link based on current page and anchor
     const currentPage = (window.location.pathname.split('/').pop() || 'index.html').toLowerCase();
+    const currentAnchor = window.location.hash.toLowerCase();
     const allLinks = document.querySelectorAll('.nav__link, .footer__nav-link');
+    
     allLinks.forEach(link => {
         const href = (link.getAttribute('href') || '').toLowerCase();
-        // Normalize index root path
         const normalizedHref = href === '' || href === '#' ? 'index.html' : href;
+        
+        // Check if this link should be active
+        let shouldBeActive = false;
+        
         if (normalizedHref.endsWith(currentPage)) {
+            // If there's an anchor in the URL, check if this link has the same anchor
+            if (currentAnchor) {
+                const linkAnchor = href.split('#')[1] || '';
+                shouldBeActive = linkAnchor === currentAnchor;
+            } else {
+                // If no anchor, only activate if this link also has no anchor
+                const linkAnchor = href.split('#')[1] || '';
+                shouldBeActive = !linkAnchor;
+            }
+        }
+        
+        if (shouldBeActive) {
             link.classList.add('nav__link--active');
         } else {
             link.classList.remove('nav__link--active');
@@ -50,18 +67,76 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Cerrar menú al hacer clic en un enlace
+    // Cerrar menú al hacer clic en un enlace y manejar scroll suave
     navLinks.forEach(link => {
-        link.addEventListener('click', function() {
+        link.addEventListener('click', function(e) {
+            const href = link.getAttribute('href');
+            
+            // Check if it's an anchor link on the same page
+            if (href && href.includes('#') && href.includes(currentPage)) {
+                e.preventDefault();
+                const targetId = href.split('#')[1];
+                const targetElement = document.getElementById(targetId);
+                
+                if (targetElement) {
+                    // Smooth scroll to the target section
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    
+                    // Update URL without page reload
+                    history.pushState(null, null, href);
+                    
+                    // Update active states after a short delay
+                    setTimeout(() => {
+                        updateActiveNavLinks();
+                    }, 100);
+                }
+            }
+            
             closeNav();
         });
     });
+    
+    // Function to update active nav links
+    function updateActiveNavLinks() {
+        const currentAnchor = window.location.hash.toLowerCase();
+        
+        allLinks.forEach(link => {
+            const href = (link.getAttribute('href') || '').toLowerCase();
+            const normalizedHref = href === '' || href === '#' ? 'index.html' : href;
+            
+            let shouldBeActive = false;
+            
+            if (normalizedHref.endsWith(currentPage)) {
+                if (currentAnchor) {
+                    const linkAnchor = href.split('#')[1] || '';
+                    shouldBeActive = linkAnchor === currentAnchor;
+                } else {
+                    const linkAnchor = href.split('#')[1] || '';
+                    shouldBeActive = !linkAnchor;
+                }
+            }
+            
+            if (shouldBeActive) {
+                link.classList.add('nav__link--active');
+            } else {
+                link.classList.remove('nav__link--active');
+            }
+        });
+    }
 
     // Cerrar menú al hacer clic fuera
     document.addEventListener('click', function(e) {
         if (!navMenu.contains(e.target) && !navToggle.contains(e.target)) {
             closeNav();
         }
+    });
+    
+    // Listen for hash changes (when user navigates with browser back/forward)
+    window.addEventListener('hashchange', function() {
+        updateActiveNavLinks();
     });
 
     // Cerrar con tecla Escape
