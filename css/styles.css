@@ -2567,7 +2567,7 @@ body {
     padding: 0 6rem;
 }
 .contacto__hero {
-    background-color: var(--secondary-dark);
+    background-color: var(--primary-dark);
     padding: 5rem 0;
     min-height: 80vh;
     display: flex;
@@ -2668,7 +2668,7 @@ body {
 
 /* Sección Visita Nuestra Matriz */
 .contacto__matriz {
-    background-color: var(--secondary-dark);
+    background-color: var(--primary-dark);
     /*padding: 5rem 0;*/
 }
 
@@ -2748,7 +2748,7 @@ body {
 
 /* Sección Únete al Equipo */
 .contacto__equipo {
-    background-color: var(--secondary-dark);
+    background-color: var(--primary-dark);
     padding: 8rem 0 2rem 0;
     text-align: center;
 }

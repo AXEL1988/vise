@@ -127,8 +127,8 @@ vise-ecuador/
 
 Si necesitas ayuda con la instalación o configuración:
 
-**Email:** edison.fernandez@email.com  
-**Teléfono:** +593 99 123 4567  
+**Email:** siperecs@gmail.com  
+**Teléfono:** +593 9 5875 3940  
 **Horario:** Lunes a Viernes, 9:00 AM - 6:00 PM  
 
 ## 📄 Archivos de Configuración
