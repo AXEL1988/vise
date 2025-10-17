@@ -16,6 +16,9 @@
         <!-- Primera sección: Fondo blanco con bullets y logo -->
         <div class="header__top">
             <div class="header__bullets">
+                <!-- <div class="bullet"></div>
+                <div class="bullet"></div>
+                <div class="bullet"></div> -->
             </div>
             <div class="header__logo">
                 <img src="images/logo.png" alt="VISE Ecuador">
@@ -28,7 +31,7 @@
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
                         <li class="nav__item">
-                            <a href="index.html#home" class="nav__link">Home<br>Page</a>
+                            <a href="#home" class="nav__link" data-close-menu>Home<br>Page</a>
                         </li>
                         <li class="nav__item">
                             <a href="soluciones.html" class="nav__link">Soluciones<br> de Seguridad</a>
@@ -59,108 +62,112 @@
         </nav>
     </header>
 
-    <!-- Sección Intro - Texto Descriptivo -->
-    <section class="tendencias__intro">
-        <div class="container">
-            <div class="tendencias__intro-content">
-                <p class="tendencias__intro-text">
-                    En VISE Ecuador mantenemos una comunicación abierta y constante con nuestros clientes y aliados. 
-                    En esta sección encontrarás noticias corporativas, logros, tendencias del sector y consejos 
-                    prácticos de seguridad, con el objetivo de mantenerte informado y reforzar la confianza en nuestros servicios.
-                </p>
+    <!-- Sección Home -->
+    <section id="home" class="home" style="scroll-margin-top: 100px;">
+        <div class="home__card">
+            <div class="home__logo">
+                <img src="images/logo.png" alt="VISE Ecuador">
+            </div>
+            <div class="home__content">
+                <p class="home__title">Seguridad combinada con <br> <span class="highlight">experiencia, tecnología y confianza</span></p>
+                <p class="home__description">Con más de 24 años de trayectoria en la región, VISE Ecuador ofrece soluciones<br>integrales en seguridad física, electrónica y tecnológica. Somos el aliado de empresas,<br>instituciones y personas que buscan protección confiable con el respaldo<br>de una compañía multinacional.</p>
             </div>
         </div>
     </section>
 
-    <!-- Sección Título Principal -->
-    <section class="tendencias__title-section">
+    <!-- Sección Características -->
+    <section id="soluciones" class="features">
         <div class="container">
-            <h1 class="tendencias__main-title">TENDENCIAS DEL SECTOR</h1>
-        </div>
-    </section>
-
-    <!-- Sección Artículos -->
-    <section class="tendencias__articles">
-        <div class="container">
-            <div class="tendencias__articles-grid">
-                <!-- Artículo 1 -->
-                <article class="tendencias__article-card">
-                    <div class="tendencias__article-image tendencias__article-image--videovigilancia">
+            <p class="features__title home__title"><span class="highlight">Nos distingue </span>nuestro</p>
+            <!--<h2 class="features__title">Nuestra fuerza está en lo que nos distingue</h2>-->
+            <div class="features__grid">
+                <div class="feature__card">
+                    <div class="feature__icon">
+                        <img src="images/Vise1.webp" alt="Equipos capacitados">
                     </div>
-                    <div class="tendencias__article-content">
-                        <p class="tendencias__article-title">
-                            Cómo la videovigilancia
-                        </p>
-                        <p class="tendencias__article-title">
-                            inteligente transforma
-                        </p>
-                        <p class="tendencias__article-title">
-                            la seguridad en empresas y
-                        </p>
-                        <p class="tendencias__article-title">
-                            urbanizaciones.
-                        </p>
+                    <p class="feature__text">Equipo altamente capacitado con trayectoria en múltiples sectores.</p>
+                </div>
+                <div class="feature__card">
+                    <div class="feature__icon">
+                        <img src="images/Vise10.webp" alt="Innovación constante">
                     </div>
-                </article>
-
-                <!-- Artículo 2 -->
-                <article class="tendencias__article-card">
-                    <div class="tendencias__article-image tendencias__article-image--biometrico">
+                    <p class="feature__text">Innovación constante en sistemas de monitoreo y control.</p>
+                </div>
+                <div class="feature__card">
+                    <div class="feature__icon">
+                        <img src="images/Vise4.webp" alt="Confianza garantizada">
                     </div>
-                    <div class="tendencias__article-content">
-                        <p class="tendencias__article-title">
-                            Las ventajas del control
-                        </p>
-                        <p class="tendencias__article-title">
-                            de accesos biométrico
-                        </p>
-                        <p class="tendencias__article-title">
-                            en entornos corporativos.
-                        </p>
+                    <p class="feature__text">Confianza garantizada por una marca con presencia internacional.</p>
+                </div>
+                <div class="feature__card">
+                    <div class="feature__icon">
+                        <img src="images/Vise2.webp" alt="Soluciones personalizadas">
                     </div>
-                </article>
-            </div>
-            <div class="tendencias__articles-grid separador__tendencias">
-                <!-- Artículo 1 -->
-                <article class="tendencias__article-card">
-                    <div class="tendencias__article-image tendencias__article-image--nuevo-monitoreo">
-                    </div>
-                    <div class="tendencias__article-content">
-                        <p class="tendencias__article-title">
-                            VISE Ecuador inaugura nuevo centro de monitoreo en Quito con tecnología de última generación
-                        </p>
-                    </div>
-                </article>
-
-                <!-- Artículo 2 -->
-                <article class="tendencias__article-card">
-                    <div class="tendencias__article-image tendencias__article-image--ampliamos-nuestro-equipo">
-                    </div>
-                    <div class="tendencias__article-content">
-                        <p class="tendencias__article-title">
-                            Ampliamos nuestro equipo de seguridad electrónica para atender la creciente demanda.
-                        </p>
-                    </div>
-                </article>
+                    <p class="feature__text">Soluciones personalizadas para cada entorno y necesidad.</p>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- Sección CTA -->
+    <section id="sectores" class="cta">
+        <div class="cta__container">
+            <!--<h2 class="cta__title">Soluciones de seguridad adaptadas a cada entorno</h2>-->
+            <p class="features__title cta__title_section "><span class="highlight_section">Soluciones de seguridad </span>adaptadas a cada entorno</p>
+            <p class="cta__subtitle">Combinamos lo mejor de la experiencia humana de la mano de la tecnología.</p>
+            
+            <div class="cta__cards">
+                <div class="cta__card">
+                    <h3 class="cta__card-title">Seguridad Física</h3>
+                    <p class="cta__card-description">Guardias, seguridad para eventos y unidades caninas.</p>
+                </div>
+                <div class="cta__card">
+                    <h3 class="cta__card-title">Seguridad Electrónica</h3>
+                    <p class="cta__card-description">Videovigilancia, control de accesos, analítica y monitoreo</p>
+                </div>
+                <div class="cta__card">
+                    <h3 class="cta__card-title">Custodia</h3>
+                    <p class="cta__card-description">Custodia de carga y protectores VIP.</p>
+                </div>
+            </div>
+
+            <!-- Controles del slider -->
+            <!-- <div class="cta__nav">
+                <button class="cta__nav-btn cta__prev" aria-label="Anterior" type="button">&#10094;</button>
+                <button class="cta__nav-btn cta__next" aria-label="Siguiente" type="button">&#10095;</button>
+            </div> -->
+            
+            <div class="cta__separator"></div>
+            
+            <a class="cta__button" href="soluciones.html">Ver todos los servicios</a>
+        </div>
+    </section>
+
+    
+    <!-- Sección CTA Superior -->
+    <section class="footer__cta-section">
+        <div class="footer__cta-container">
+            <p class="highlight_section_footer_p">Haz de la seguridad <span class="highlight_section_footer">un aliado estratégico.</span></p>
+            <a class="footer__cta-button" href="contacto.html#contacto">Contáctanos</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="footer">
         <!-- Nueva Sección Footer -->
         <div class="footer__new-section">
             <!-- Primera Fila: 3 Columnas de Contacto (Marrón/Naranja) -->
             <div class="footer__contact-row">
                 <div class="footer__contact-grid">
-                    <!-- Columna 1: Atención al Empleado -->
-                    <div class="footer__contact-column footer__contact-column--empleado">
-                        <div class="footer__contact-left">
-                            <div class="footer__contact-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 1c-4.97 0-9 4.03-9 9 0 1.29.27 2.51.75 3.62L1 22l8.38-2.75C10.49 19.73 11.71 20 13 20c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-1.5 13.5c-.28 0-.5-.22-.5-.5s.22-.5.5-.5.5.22.5.5-.22.5-.5.5zm2.5 0c-.28 0-.5-.22-.5-.5s.22-.5.5-.5.5.22.5.5-.22.5-.5.5zm2.5 0c-.28 0-.5-.22-.5-.5s.22-.5.5-.5.5.22.5.5-.22.5-.5.5z"/>
-                                </svg>
+                        <!-- Columna 1: Atención al Empleado -->
+                        <div class="footer__contact-column footer__contact-column--empleado">
+                            <div class="footer__contact-left">
+                                <div class="footer__contact-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 1c-4.97 0-9 4.03-9 9 0 1.29.27 2.51.75 3.62L1 22l8.38-2.75C10.49 19.73 11.71 20 13 20c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-1.5 13.5c-.28 0-.5-.22-.5-.5s.22-.5.5-.5.5.22.5.5-.22.5-.5.5zm2.5 0c-.28 0-.5-.22-.5-.5s.22-.5.5-.5.5.22.5.5-.22.5-.5.5zm2.5 0c-.28 0-.5-.22-.5-.5s.22-.5.5-.5.5.22.5.5-.22.5-.5.5z"/>
+                                    </svg>
+                                </div>
                             </div>
-                        </div>
                         <div class="footer__contact-right">
                             <h3 class="footer__contact-title">ATENCIÓN AL EMPLEADO</h3>
                             <div class="footer__contact-info">
@@ -170,15 +177,15 @@
                         </div>
                     </div>
 
-                    <!-- Columna 2: Donde Nos Encontramos -->
-                    <div class="footer__contact-column footer__contact-column--ubicacion">
-                        <div class="footer__contact-left">
-                            <div class="footer__contact-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                                </svg>
+                        <!-- Columna 2: Donde Nos Encontramos -->
+                        <div class="footer__contact-column footer__contact-column--ubicacion">
+                            <div class="footer__contact-left">
+                                <div class="footer__contact-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                    </svg>
+                                </div>
                             </div>
-                        </div>
                         <div class="footer__contact-right">
                             <h3 class="footer__contact-title">DONDE NOS ENCONTRAMOS</h3>
                             <div class="footer__contact-info">
@@ -190,15 +197,15 @@
                         </div>
                     </div>
 
-                    <!-- Columna 3: Atención al Cliente -->
-                    <div class="footer__contact-column footer__contact-column--cliente">
-                        <div class="footer__contact-left">
-                            <div class="footer__contact-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-                                </svg>
+                        <!-- Columna 3: Atención al Cliente -->
+                        <div class="footer__contact-column footer__contact-column--cliente">
+                            <div class="footer__contact-left">
+                                <div class="footer__contact-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                                    </svg>
+                                </div>
                             </div>
-                        </div>
                         <div class="footer__contact-right">
                             <h3 class="footer__contact-title">ATENCIÓN AL CLIENTE</h3>
                             <div class="footer__contact-info">

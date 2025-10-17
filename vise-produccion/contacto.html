@@ -16,6 +16,9 @@
         <!-- Primera sección: Fondo blanco con bullets y logo -->
         <div class="header__top">
             <div class="header__bullets">
+                <!-- <div class="bullet"></div>
+                <div class="bullet"></div>
+                <div class="bullet"></div> -->
             </div>
             <div class="header__logo">
                 <img src="images/logo.png" alt="VISE Ecuador">
@@ -28,7 +31,7 @@
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
                         <li class="nav__item">
-                            <a href="index.html#home" class="nav__link">Home<br>Page</a>
+                            <a href="index.html" class="nav__link">Home<br>Page</a>
                         </li>
                         <li class="nav__item">
                             <a href="soluciones.html" class="nav__link">Soluciones<br> de Seguridad</a>
@@ -43,7 +46,7 @@
                             <a href="tendencias.html" class="nav__link">Tendencias <br>del Sector</a>
                         </li>
                         <li class="nav__item">
-                            <a href="contacto.html#contacto" class="nav__link">Contáctanos</a>
+                            <a href="contacto.html#contacto" class="nav__link nav__link--active">Contáctanos</a>
                         </li>
                         <li class="nav__item">
                             <a href="contacto.html#trabaja" class="nav__link">Trabaja con nosotros</a>
@@ -59,89 +62,129 @@
         </nav>
     </header>
 
-    <!-- Sección Intro - Texto Descriptivo -->
-    <section class="tendencias__intro">
+    <!-- Sección Principal - Formulario de Contacto -->
+    <section id="contacto" class="contacto__hero">
         <div class="container">
-            <div class="tendencias__intro-content">
-                <p class="tendencias__intro-text">
-                    En VISE Ecuador mantenemos una comunicación abierta y constante con nuestros clientes y aliados. 
-                    En esta sección encontrarás noticias corporativas, logros, tendencias del sector y consejos 
-                    prácticos de seguridad, con el objetivo de mantenerte informado y reforzar la confianza en nuestros servicios.
-                </p>
+            <div class="contacto__hero-content">
+                <h1 class="contacto__hero-title">Contáctanos para más información</h1>
+                <div class="contacto__hero-text">
+                    <p class="contacto__hero-description">
+                        En VISE Ecuador estamos listos para escucharte y ofrecerte la solución de seguridad 
+                        que mejor se adapte a tus necesidades.
+                    </p>
+                    <p class="contacto__hero-description">
+                        Nuestro equipo de asesores está disponible para responder tus consultas,
+                    </p>
+                    <p class="contacto__hero-description">
+                        agendar citas y guiarte en cada paso del proceso.
+                    </p>
+                </div>
+                
+                <form class="contacto__form" id="formularioCita">
+                    <div class="contacto__form-group">
+                        <input type="text" class="contacto__input" id="nombre" placeholder="NOMBRES Y APELLIDOS" required>
+                    </div>
+                    <div class="contacto__form-group">
+                        <input type="email" class="contacto__input" id="correo" placeholder="CORREO ELECTRÓNICO" required>
+                    </div>
+                    <div class="contacto__form-group">
+                        <input type="tel" class="contacto__input" id="telefono" placeholder="TELÉFONO" required>
+                    </div>
+                    <div class="contacto__form-group">
+                    <button type="submit" class="contacto__cta-button">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+                        </svg>
+                        SOLICITAR CITA
+                    </button>
+                    </div>
+                    
+                </form>
             </div>
         </div>
     </section>
 
-    <!-- Sección Título Principal -->
-    <section class="tendencias__title-section">
-        <div class="container">
-            <h1 class="tendencias__main-title">TENDENCIAS DEL SECTOR</h1>
+    <!-- Sección Visita Nuestra Matriz -->
+    <section class="contacto__matriz">
+        <div class="container_contacto_matriz">
+            <div class="contacto__matriz-content">
+                <div class="contacto__matriz-text">
+                    <h4 class="contacto__matriz-title">Visita Nuestra Matriz</h2>
+                    <p class="contacto__matriz-description">
+                        Te esperamos en nuestra matriz, donde podrás
+                    </p>
+                    <p class="contacto__matriz-description">
+                        conocer de cerca nuestras operaciones
+                    </p>
+                    <p class="contacto__matriz-description">
+                        y el equipo que respalda
+                    </p>
+                    <p class="contacto__matriz-description">
+                        cada solución de seguridad.
+                    </p>
+                    
+                </div>
+                <div class="contacto__matriz-map">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.797339536124!2d-78.4902242247858!3d-0.1858113998123533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59b0e45e5aac1%3A0xd3470a6dba5c9fa3!2sEdificio%20Stratta!5e0!3m2!1ses!2sec!4v1759895382881!5m2!1ses!2sec"
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        class="contacto__map-iframe">
+                    </iframe>
+                    <div class="contacto__map-overlay">
+                        <div class="contacto__map-info">
+                            <h3>VISE Ecuador</h3>
+                            <p>Inglaterra E3-266 Avenida Amazonas<br>
+                            Edificio Stratta, Piso 7<br>
+                            Quito, Ecuador</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Sección Artículos -->
-    <section class="tendencias__articles">
-        <div class="container">
-            <div class="tendencias__articles-grid">
-                <!-- Artículo 1 -->
-                <article class="tendencias__article-card">
-                    <div class="tendencias__article-image tendencias__article-image--videovigilancia">
-                    </div>
-                    <div class="tendencias__article-content">
-                        <p class="tendencias__article-title">
-                            Cómo la videovigilancia
-                        </p>
-                        <p class="tendencias__article-title">
-                            inteligente transforma
-                        </p>
-                        <p class="tendencias__article-title">
-                            la seguridad en empresas y
-                        </p>
-                        <p class="tendencias__article-title">
-                            urbanizaciones.
-                        </p>
-                    </div>
-                </article>
-
-                <!-- Artículo 2 -->
-                <article class="tendencias__article-card">
-                    <div class="tendencias__article-image tendencias__article-image--biometrico">
-                    </div>
-                    <div class="tendencias__article-content">
-                        <p class="tendencias__article-title">
-                            Las ventajas del control
-                        </p>
-                        <p class="tendencias__article-title">
-                            de accesos biométrico
-                        </p>
-                        <p class="tendencias__article-title">
-                            en entornos corporativos.
-                        </p>
-                    </div>
-                </article>
+    <!-- Sección Únete al Equipo -->
+    <section id="trabaja" class="contacto__equipo">
+        <div class="container_contacto">
+            <div class="contacto__equipo-content">
+                <h2 class="contacto__equipo-title">Únete al equipo Vise Ecuador</h2>
+                <div class="contacto__equipo-text">
+                    <p class="contacto__equipo-description">
+                        En VISE Ecuador creemos en el talento de las personas como motor de nuestro
+                    </p>
+                    <p class="contacto__equipo-description">
+                        crecimiento. Si deseas formar parte de un equipo comprometido, innovador y con
+                    </p>
+                    <p class="contacto__equipo-description">
+                        proyección internacional, envíanos tu hoja de vida y da el siguiente paso en tu
+                    
+                        carrera profesional.
+                    </p>
+                </div>
             </div>
-            <div class="tendencias__articles-grid separador__tendencias">
-                <!-- Artículo 1 -->
-                <article class="tendencias__article-card">
-                    <div class="tendencias__article-image tendencias__article-image--nuevo-monitoreo">
-                    </div>
-                    <div class="tendencias__article-content">
-                        <p class="tendencias__article-title">
-                            VISE Ecuador inaugura nuevo centro de monitoreo en Quito con tecnología de última generación
-                        </p>
-                    </div>
-                </article>
+            <div class="contacto__form-group">
+                <!-- <a href="mailto:reclutamiento.vise@senapro.com" class="contacto__cta-button-equipo">
+                    ADJUNTA TU CV
+                </a> -->
+                <button type="button" class="contacto__cta-button-equipo" onclick="enviarCorreo()">
+                    ADJUNTA TU CV
+                </button>
 
-                <!-- Artículo 2 -->
-                <article class="tendencias__article-card">
-                    <div class="tendencias__article-image tendencias__article-image--ampliamos-nuestro-equipo">
-                    </div>
-                    <div class="tendencias__article-content">
-                        <p class="tendencias__article-title">
-                            Ampliamos nuestro equipo de seguridad electrónica para atender la creciente demanda.
-                        </p>
-                    </div>
-                </article>
+                <a href="https://wa.me/593990667018" target="_blank" class="contacto__cta-button-equipo-accesor">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+                    </svg>
+                    HABLA CON NOSOTROS
+                </a>
+
+            </div>
+            <div class="contacto__form-group">
+               
             </div>
         </div>
     </section>
@@ -261,5 +304,52 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <script>
+        document.getElementById("formularioCita").addEventListener("submit", function(event) {
+            event.preventDefault();
+    
+            const nombre = document.getElementById("nombre").value.trim();
+            const correo = document.getElementById("correo").value.trim();
+            const telefono = document.getElementById("telefono").value.trim();
+    
+            if (!nombre || !correo || !telefono) {
+                alert("Por favor completa todos los campos.");
+                return;
+            }
+    
+            const numeroWhatsApp = "593999206671"; // Cambia este número
+    
+            const mensaje = `Hola, quiero solicitar una cita.
+Mi nombre es: ${nombre}
+Correo: ${correo}
+Teléfono: ${telefono}`;
+    
+            const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURI(mensaje)}`;
+    
+            window.open(url, "_blank");
+        });
+
+        function enviarCorreo() {
+            const email = "reclutamiento.vise@senapro.com";
+            const subject = "Adjunto mi CV";
+            const encodedSubject = encodeURIComponent(subject);
+    
+            const gmailURL = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodedSubject}`;
+            const mailtoURL = `mailto:${email}?subject=${encodedSubject}`;
+    
+            // Detectamos si el usuario está en móvil o tiene preferencia por Gmail
+            const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+            const prefersGmail = navigator.userAgent.includes("Chrome") && !navigator.userAgent.includes("Edg");
+    
+            if (isMobile || prefersGmail) {
+                // Abrimos Gmail en nueva pestaña
+                window.open(gmailURL, "_blank");
+            } else {
+                // Intentamos abrir cliente de correo local
+                window.location.href = mailtoURL;
+            }
+        }
+
+    </script>
 </body>
 </html>
