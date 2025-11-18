@@ -2,6 +2,7 @@
 
 Sitio web oficial de VISE Ecuador, empresa líder en soluciones integrales de seguridad.
 
+
 ## 📊 Estadísticas del Proyecto
 
 - **Peso total:** ~60MB (optimizado desde 450MB)
