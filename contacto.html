@@ -9,6 +9,154 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos para Modal de Privacidad - Específicos para evitar conflictos */
+        #modal-privacidad {
+            display: none !important;
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            z-index: 99999 !important;
+            align-items: center !important;
+            justify-content: center !important;
+            visibility: hidden !important;
+            opacity: 0 !important;
+            transition: opacity 0.3s ease !important;
+        }
+
+        #modal-privacidad.modal-active {
+            display: flex !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+
+        #modal-privacidad .modal__overlay {
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            background-color: rgba(0, 0, 0, 0.7) !important;
+            cursor: pointer !important;
+            z-index: 1 !important;
+        }
+
+        #modal-privacidad .modal__content--privacidad {
+            position: relative !important;
+            background: white !important;
+            border-radius: 8px !important;
+            max-width: 800px !important;
+            width: 90% !important;
+            max-height: 90vh !important;
+            overflow-y: auto !important;
+            z-index: 2 !important;
+            padding: 2rem !important;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+            margin: auto !important;
+        }
+
+        #modal-privacidad .modal__close {
+            position: absolute !important;
+            top: 1rem !important;
+            right: 1rem !important;
+            background: transparent !important;
+            border: none !important;
+            cursor: pointer !important;
+            padding: 0.5rem !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            color: #333 !important;
+            z-index: 3 !important;
+        }
+
+        #modal-privacidad .modal__close:hover {
+            color: #000 !important;
+        }
+
+        #modal-privacidad .modal__privacidad-content {
+            padding: 1rem 0 !important;
+        }
+
+        #modal-privacidad .modal__privacidad-title {
+            font-size: 1.5rem !important;
+            font-weight: 700 !important;
+            margin-bottom: 1.5rem !important;
+            color: #333 !important;
+            text-align: center !important;
+            font-family: 'Montserrat', sans-serif !important;
+        }
+
+        #modal-privacidad .modal__privacidad-text {
+            margin-bottom: 2rem !important;
+            line-height: 1.6 !important;
+            color: #555 !important;
+            font-family: 'Source Sans Pro', sans-serif !important;
+        }
+
+        #modal-privacidad .modal__privacidad-text p {
+            margin-bottom: 1rem !important;
+            text-align: justify !important;
+        }
+
+        #modal-privacidad .modal__privacidad-checkbox {
+            margin-bottom: 2rem !important;
+            padding: 1rem !important;
+            background-color: #f5f5f5 !important;
+            border-radius: 4px !important;
+        }
+
+        #modal-privacidad .modal__privacidad-label {
+            display: flex !important;
+            align-items: flex-start !important;
+            cursor: pointer !important;
+            font-family: 'Source Sans Pro', sans-serif !important;
+        }
+
+        #modal-privacidad .modal__privacidad-checkbox-input {
+            margin-right: 0.75rem !important;
+            margin-top: 0.25rem !important;
+            width: 20px !important;
+            height: 20px !important;
+            cursor: pointer !important;
+            flex-shrink: 0 !important;
+        }
+
+        #modal-privacidad .modal__privacidad-checkbox-text {
+            line-height: 1.5 !important;
+            color: #333 !important;
+            font-size: 0.95rem !important;
+        }
+
+        #modal-privacidad .modal__privacidad-actions {
+            display: flex !important;
+            justify-content: center !important;
+            margin-top: 1.5rem !important;
+        }
+
+        #modal-privacidad .modal__privacidad-actions button:disabled {
+            opacity: 0.5 !important;
+            cursor: not-allowed !important;
+        }
+
+        @media (max-width: 768px) {
+            #modal-privacidad .modal__content--privacidad {
+                width: 95% !important;
+                padding: 1.5rem !important;
+                max-height: 95vh !important;
+            }
+
+            #modal-privacidad .modal__privacidad-title {
+                font-size: 1.25rem !important;
+            }
+
+            #modal-privacidad .modal__privacidad-text {
+                font-size: 0.9rem !important;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Header y Navegación -->
@@ -168,15 +316,15 @@
                 <!-- <a href="mailto:reclutamiento.vise@senapro.com" class="contacto__cta-button-equipo">
                     ADJUNTA TU CV
                 </a> -->
-                <button type="button" class="contacto__cta-button-equipo" onclick="enviarCorreo()">
+                <button type="button" class="contacto__cta-button-equipo" id="btnAdjuntarCV">
                     ADJUNTA TU CV
                 </button>
 
-                <a href="https://wa.me/593990667018" target="_blank" class="contacto__cta-button-equipo-accesor">
+                <a href="https://wa.me/593984034875" target="_blank" class="contacto__cta-button-equipo-accesor">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                         <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
                     </svg>
-                    Asesor RRHH
+                    Asesor Talento Humano
                 </a>
 
             </div>
@@ -205,7 +353,7 @@
                             <h3 style="text-transform: none;" class="footer__contact-title">Contáctanos</h3>
                             <div class="footer__contact-info">
                                 <p>Asesor Comercial: (+593) 999206671</p>
-                                <p>Gestión del Talento Humano: (+593) 963150101</p>
+                                <p>Gestión del Talento Humano: (+593) 963150101 - 984034875</p>
                             </div>
                         </div>
                     </div>
@@ -280,33 +428,102 @@
         <div class="footer__bottom-bar"></div>
     </footer>
 
+    <!-- Modal de Privacidad -->
+    <div class="modal" id="modal-privacidad">
+        <div class="modal__overlay" id="modalOverlay"></div>
+        <div class="modal__content modal__content--privacidad">
+            <button class="modal__close" id="modalClose">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            
+            <div class="modal__privacidad-content">
+                <h2 class="modal__privacidad-title">AVISO DE PRIVACIDAD PARA CARGA DE HOJA DE VIDA EN PÁGINA WEB</h2>
+                
+                <div class="modal__privacidad-text">
+                    <p>En cumplimiento de la normativa vigente sobre protección de datos personales, informamos que los datos personales y documentos que usted proporcione a través de este portal web, al cargar su hoja de vida y/o información relacionada con su perfil profesional, serán utilizados <b>únicamente para la gestión de procesos de reclutamiento, evaluación, preselección y posible vinculación laboral</b> dentro de nuestra compañía.</p>
+                    
+                    <p>El tratamiento de sus datos se realiza con su <b>consentimiento libre, específico, informado e inequívoco</b>, otorgado al cargar voluntariamente su información en este portal con el fin de participar en procesos de selección.</p>
+                    
+                    <p>Su información será tratada de manera confidencial y utilizada exclusivamente para los fines antes indicados. No será compartida con terceros, salvo con proveedores que la compañía presta servicios, quienes recibirán únicamente los datos estrictamente necesarios y bajo acuerdos de confidencialidad.</p>
+                    
+                    <p>Al cargar su hoja de vida y enviar su información a través de este medio, usted declara haber leído este aviso de privacidad y <b>autoriza el tratamiento de sus datos personales para los fines indicados</b>.</p>
+                    
+                    <p>Los datos recopilados serán tratados y eliminados conforme a la Política de Tratamiento de Datos Personales de VISE, garantizando su uso exclusivo para los fines autorizados. Su conservación y posterior supresión se realizarán bajo medidas de seguridad adecuadas y dentro de los plazos establecidos por VISE.</p>
+                </div>
+                
+                <div class="modal__privacidad-checkbox">
+                    <label class="modal__privacidad-label">
+                        <input type="checkbox" id="aceptoPrivacidad" class="modal__privacidad-checkbox-input">
+                        <span class="modal__privacidad-checkbox-text"><b>He leído y acepto el Aviso de Privacidad y autorizo el tratamiento de mis datos personales para fines de reclutamiento.</b></span>
+                    </label>
+                </div>
+                
+                <div class="modal__privacidad-actions">
+                    <button type="button" class="contacto__cta-button-equipo" id="btnAceptarPrivacidad" disabled>
+                        ACEPTO
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="js/script.min.js"></script>
     <script>
-        document.getElementById("formularioCita").addEventListener("submit", function(event) {
-            event.preventDefault();
-    
-            const nombre = document.getElementById("nombre").value.trim();
-            const correo = document.getElementById("correo").value.trim();
-            const telefono = document.getElementById("telefono").value.trim();
-    
-            if (!nombre || !correo || !telefono) {
-                alert("Por favor completa todos los campos.");
-                return;
+        // Funciones globales para el modal de privacidad
+        window.mostrarModalPrivacidad = function() {
+            try {
+                console.log("Función mostrarModalPrivacidad llamada");
+                const modal = document.getElementById("modal-privacidad");
+                if (!modal) {
+                    console.error("Modal no encontrado");
+                    return;
+                }
+                console.log("Modal encontrado, mostrando...");
+                modal.classList.add("modal-active");
+                modal.style.display = "flex";
+                modal.style.visibility = "visible";
+                modal.style.opacity = "1";
+                document.body.style.overflow = "hidden";
+                
+                // Resetear checkbox
+                const checkbox = document.getElementById("aceptoPrivacidad");
+                const btnAceptar = document.getElementById("btnAceptarPrivacidad");
+                if (checkbox) checkbox.checked = false;
+                if (btnAceptar) btnAceptar.disabled = true;
+                console.log("Modal mostrado correctamente");
+            } catch (error) {
+                console.error("Error al mostrar modal:", error);
             }
-    
-            const numeroWhatsApp = "593999206671"; // Cambia este número
-    
-            const mensaje = `Hola, quiero solicitar una cita.
-Mi nombre es: ${nombre}
-Correo: ${correo}
-Teléfono: ${telefono}`;
-    
-            const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURI(mensaje)}`;
-    
-            window.open(url, "_blank");
-        });
+        };
 
-        function enviarCorreo() {
+        window.cerrarModalPrivacidad = function() {
+            try {
+                const modal = document.getElementById("modal-privacidad");
+                if (modal) {
+                    modal.classList.remove("modal-active");
+                    modal.style.display = "none";
+                    document.body.style.overflow = "";
+                }
+            } catch (error) {
+                console.error("Error al cerrar modal:", error);
+            }
+        };
+
+        window.aceptarPrivacidad = function() {
+            try {
+                const checkbox = document.getElementById("aceptoPrivacidad");
+                if (checkbox && checkbox.checked) {
+                    cerrarModalPrivacidad();
+                    enviarCorreo();
+                }
+            } catch (error) {
+                console.error("Error al aceptar privacidad:", error);
+            }
+        };
+
+        window.enviarCorreo = function() {
             const email = "reclutamiento.vise@senapro.com";
             const subject = "Adjunto mi CV";
             const encodedSubject = encodeURIComponent(subject);
@@ -325,8 +542,85 @@ Teléfono: ${telefono}`;
                 // Intentamos abrir cliente de correo local
                 window.location.href = mailtoURL;
             }
-        }
+        };
 
+        // Inicialización cuando el DOM esté listo
+        document.addEventListener("DOMContentLoaded", function() {
+            // Formulario de cita
+            const formularioCita = document.getElementById("formularioCita");
+            if (formularioCita) {
+                formularioCita.addEventListener("submit", function(event) {
+                    event.preventDefault();
+            
+                    const nombre = document.getElementById("nombre").value.trim();
+                    const correo = document.getElementById("correo").value.trim();
+                    const telefono = document.getElementById("telefono").value.trim();
+            
+                    if (!nombre || !correo || !telefono) {
+                        alert("Por favor completa todos los campos.");
+                        return;
+                    }
+            
+                    const numeroWhatsApp = "593999206671";
+            
+                    const mensaje = `Hola, quiero solicitar una cita.
+Mi nombre es: ${nombre}
+Correo: ${correo}
+Teléfono: ${telefono}`;
+            
+                    const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURI(mensaje)}`;
+            
+                    window.open(url, "_blank");
+                });
+            }
+
+            // Botón para adjuntar CV
+            const btnAdjuntarCV = document.getElementById("btnAdjuntarCV");
+            if (btnAdjuntarCV) {
+                btnAdjuntarCV.addEventListener("click", function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    console.log("Botón clickeado, mostrando modal...");
+                    mostrarModalPrivacidad();
+                    return false;
+                });
+            } else {
+                console.error("Botón btnAdjuntarCV no encontrado");
+            }
+
+            // Checkbox de privacidad
+            const checkbox = document.getElementById("aceptoPrivacidad");
+            const btnAceptar = document.getElementById("btnAceptarPrivacidad");
+            
+            if (checkbox && btnAceptar) {
+                checkbox.addEventListener("change", function() {
+                    btnAceptar.disabled = !this.checked;
+                });
+            }
+
+            // Botón de aceptar privacidad
+            if (btnAceptar) {
+                btnAceptar.addEventListener("click", function() {
+                    aceptarPrivacidad();
+                });
+            }
+
+            // Overlay para cerrar modal
+            const modalOverlay = document.getElementById("modalOverlay");
+            if (modalOverlay) {
+                modalOverlay.addEventListener("click", function() {
+                    cerrarModalPrivacidad();
+                });
+            }
+
+            // Botón de cerrar modal
+            const modalClose = document.getElementById("modalClose");
+            if (modalClose) {
+                modalClose.addEventListener("click", function() {
+                    cerrarModalPrivacidad();
+                });
+            }
+        });
     </script>
 </body>
 </html>
