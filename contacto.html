@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VISE Ecuador - Seguridad Integral</title>
-    <link rel="preload" href="css/styles.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="css/styles.min.css"></noscript>
+    <link rel="stylesheet" href="css/styles.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
@@ -99,6 +98,32 @@
         #modal-privacidad .modal__privacidad-text p {
             margin-bottom: 1rem !important;
             text-align: justify !important;
+        }
+
+        #modal-privacidad .modal__privacidad-pdf {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            gap: 0.5rem !important;
+            margin: 0 0 1.5rem !important;
+            font-family: 'Montserrat', sans-serif !important;
+            font-weight: 700 !important;
+            font-size: 0.95rem !important;
+            color: #1A202C !important;
+            text-decoration: underline !important;
+            text-underline-offset: 3px !important;
+            transition: opacity 0.2s ease !important;
+        }
+
+        #modal-privacidad .modal__privacidad-pdf:hover,
+        #modal-privacidad .modal__privacidad-pdf:focus-visible {
+            opacity: 0.7 !important;
+        }
+
+        #modal-privacidad .modal__privacidad-pdf svg {
+            flex: 0 0 auto !important;
+            width: 20px !important;
+            height: 20px !important;
         }
 
         #modal-privacidad .modal__privacidad-checkbox {
@@ -198,6 +223,9 @@
                         </li>
                         <li class="nav__item">
                             <a href="contacto.html#trabaja" class="nav__link">Trabaja con nosotros</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="docs/politica-proteccion-datos.pdf" target="_blank" rel="noopener noreferrer" class="nav__link">Protección<br> de Datos</a>
                         </li>
                     </ul>
                 </div>
@@ -452,6 +480,18 @@
                     
                     <p>Los datos recopilados serán tratados y eliminados conforme a la Política de Tratamiento de Datos Personales de VISE, garantizando su uso exclusivo para los fines autorizados. Su conservación y posterior supresión se realizarán bajo medidas de seguridad adecuadas y dentro de los plazos establecidos por VISE.</p>
                 </div>
+
+                <a href="docs/politica-proteccion-datos.pdf" target="_blank" rel="noopener noreferrer"
+                   class="modal__privacidad-pdf"
+                   aria-label="Ver la Política de Protección de Datos Personales en PDF (abre en una pestaña nueva)">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                        <polyline points="14 2 14 8 20 8"/>
+                        <line x1="8" y1="13" x2="16" y2="13"/>
+                        <line x1="8" y1="17" x2="16" y2="17"/>
+                    </svg>
+                    Ver Política de Protección de Datos
+                </a>
                 
                 <div class="modal__privacidad-checkbox">
                     <label class="modal__privacidad-label">
